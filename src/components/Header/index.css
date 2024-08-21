@@ -1,0 +1,21 @@
+.promo-bar {
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-button {
+  right: 16px;
+  transition: opacity 0.1s ease-in;
+}
+.close-button:hover {
+  opacity: 0.8;
+}
+.ring-bottom {
+  box-shadow: 0px 1px 0px #ffffff;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}

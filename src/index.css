@@ -4,3 +4,82 @@ will be here as css variables
 
 
 */
+:root {
+  --primary-base: #001f3f;
+  --primary-100: #e6e9ec;
+  --primary-200: #d9dde2;
+  --primary-300: #b0bac3;
+  --primary-400: #001932;
+  --primary-500: #00172f;
+  --primary-600: #001326;
+  --primary-700: #000b16;
+
+  --secondary-base: #00bfff;
+  --secondary-100: #e6f9ff;
+  --secondary-200: #d9f5ff;
+  --secondary-300: #b0ebff;
+  --secondary-400: #00ace6;
+  --secondary-500: #008fbf;
+}
+
+/* utility classes  */
+
+.fs-7 {
+  font-size: 14px;
+}
+.fs-8 {
+  font-size: 12px;
+}
+.text-inherit {
+  color: inherit;
+}
+
+.bg-primary-base {
+  background-color: var(--primary-base);
+}
+
+.bg-primary-600 {
+  background-color: var(--primary-600);
+}
+
+.w-1 {
+  width: 4px;
+}
+.w-2 {
+  width: 8px;
+}
+.w-3 {
+  width: 12px;
+}
+.w-4 {
+  width: 16px;
+}
+.w-5 {
+  width: 20px;
+}
+.w-6 {
+  width: 24px;
+}
+
+.h-1 {
+  height: 4px;
+}
+.h-2 {
+  height: 8px;
+}
+.h-3 {
+  height: 12px;
+}
+.h-4 {
+  height: 16px;
+}
+.h-5 {
+  height: 20px;
+}
+.h-6 {
+  height: 24px;
+}
+
+body {
+  font-family: "Open Sauce One";
+}

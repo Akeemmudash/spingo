@@ -83,3 +83,7 @@ will be here as css variables
 body {
   font-family: "Open Sauce One";
 }
+
+.layout {
+  height: 100vh;
+}

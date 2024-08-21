@@ -2,25 +2,24 @@ import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import "@fontsource/open-sauce-one";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import {
   QueryClient,
   QueryClientProvider,
   useQuery,
 } from "@tanstack/react-query";
 
-const queryClient = new QueryClient();
-
 import Home from "./pages/Home";
+import Layout from "./pages/Layout";
+import SignUp from "./pages/SignUp";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import SignUp from "./pages/SignUp";
 
+const queryClient = new QueryClient();
 const router = createBrowserRouter([
   {
     path: "/",
-
+    element: <Layout />,
     children: [
       {
         element: <Home />,

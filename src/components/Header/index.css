@@ -15,7 +15,18 @@
 .ring-bottom {
   box-shadow: 0px 1px 0px #ffffff;
 }
-
+a.nav-link {
+  color: var(--base-black);
+}
 .dropdown-toggle::after {
   display: none;
+}
+.chevron-down__svg {
+  transition: transform 0.3s ease;
+}
+.dropdown__tab.rotate .chevron-down__svg {
+  transform: rotate(180deg);
+}
+.header__icons > *:not(:last-child) {
+  margin-right: 16px;
 }

@@ -20,6 +20,8 @@ will be here as css variables
   --secondary-300: #b0ebff;
   --secondary-400: #00ace6;
   --secondary-500: #008fbf;
+
+  --base-black: #141718;
 }
 
 /* utility classes  */
@@ -79,7 +81,20 @@ will be here as css variables
 .h-6 {
   height: 24px;
 }
+.btn-reset {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
 
+button:focus:not(:focus-visible) {
+  box-shadow: none;
+}
 body {
   font-family: "Open Sauce One";
 }

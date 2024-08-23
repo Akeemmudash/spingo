@@ -10,7 +10,7 @@ import {
 
 import Home from "./pages/Home";
 import Layout from "./pages/Layout";
-import SignUp from "./pages/SignUp";
+import { SignIn, SignUp } from "./pages/SignUp";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
@@ -41,7 +41,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/login-in",
-    element: <div>This is login</div>,
+    element: <SignIn />,
   },
 ]);
 

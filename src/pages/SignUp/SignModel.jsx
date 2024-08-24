@@ -1,7 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
+import ButtonUse from "./ButtonUse";
+import PasswordToggle from "./PasswordInput";
 import "./login.css";
-import { PasswordToggle, ButtonUse } from "../../Utils";
 
 const SignModel = ({
   WebDP,
@@ -57,7 +58,9 @@ const SignModel = ({
             <form>
               {YourName && <input type="text" placeholder={YourName} />}
               {UserName && <input type="text" placeholder={UserName} />}
-              {EmailAddress && <input type="email" placeholder={EmailAddress} />}
+              {EmailAddress && (
+                <input type="email" placeholder={EmailAddress} />
+              )}
               <PasswordToggle />
             </form>
             <div className="login__options">

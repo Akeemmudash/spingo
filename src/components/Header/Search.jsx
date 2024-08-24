@@ -80,7 +80,7 @@ export default function Search() {
 
   return (
     <>
-      <SearchButton onClick={handleShow} />
+      <SearchToggler onClick={handleShow} />
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Modal heading</Modal.Title>

@@ -4,6 +4,7 @@ will be here as css variables
 
 
 */
+@import url("https://fonts.cdnfonts.com/css/coolvetica");
 :root {
   --primary-base: #001f3f;
   --primary-100: #e6e9ec;
@@ -21,11 +22,16 @@ will be here as css variables
   --secondary-400: #00ace6;
   --secondary-500: #008fbf;
 
-  --base-black: #141718;
+  --base-black: #030206;
 }
 
 /* utility classes  */
-
+.font-primary {
+  font-family: "Coolvetica", sans-serif;
+}
+.font-secondary {
+  font-family: "Open Sauce One", sans-serif;
+}
 .fs-7 {
   font-size: 14px;
 }
@@ -35,7 +41,12 @@ will be here as css variables
 .text-inherit {
   color: inherit;
 }
-
+.text-black {
+  color: var(--base-black);
+}
+.bg-black-base {
+  background-color: var(--base-black);
+}
 .bg-primary-base {
   background-color: var(--primary-base);
 }
@@ -62,7 +73,9 @@ will be here as css variables
 .w-6 {
   width: 24px;
 }
-
+.h-0\.5 {
+  height: 2px;
+}
 .h-1 {
   height: 4px;
 }
@@ -96,7 +109,6 @@ button:focus:not(:focus-visible) {
   box-shadow: none;
 }
 body {
-  font-family: "Open Sauce One";
 }
 
 .layout {

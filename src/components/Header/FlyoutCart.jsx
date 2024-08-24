@@ -2,7 +2,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import Offcanvas from "react-bootstrap/Offcanvas";
 
-export default function ShoppingCart() {
+export default function FlyoutCart() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -10,10 +10,10 @@ export default function ShoppingCart() {
 
   return (
     <>
-      <ShoppingCartButton onClick={handleShow} />
+      <FlyoutCartButton onClick={handleShow} />
       <Offcanvas show={show} onHide={handleClose} placement={"end"}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+          <Offcanvas.Title>Cart</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
           Some text as placeholder. In real life you can have the elements you
@@ -23,13 +23,17 @@ export default function ShoppingCart() {
     </>
   );
 }
-ShoppingCartButton.propTypes = {
+FlyoutCartButton.propTypes = {
   onClick: PropTypes.func,
 };
 
-function ShoppingCartButton({ onClick }) {
+function FlyoutCartButton({ onClick }) {
   return (
-    <button className="btn-reset" onClick={onClick} aria-label="Show Cart">
+    <button
+      className="btn-reset d-flex align-items-center"
+      onClick={onClick}
+      aria-label="Show Cart"
+    >
       <svg
         width="24"
         height="24"
@@ -55,6 +59,9 @@ function ShoppingCartButton({ onClick }) {
           />
         </g>
       </svg>
+      <span className="number-of-items ms-1 bg-primary-600 rounded-circle d-flex fs-8 w-5 h-5 text-white justify-content-center align-items-center">
+        {3}
+      </span>
     </button>
   );
 }

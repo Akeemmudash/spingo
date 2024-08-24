@@ -2,6 +2,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import "@fontsource/open-sauce-one";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 import {
   QueryClient,
   QueryClientProvider,
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <div>This is blog</div>,
+      },
+      {
+        path: "/contact",
+        element: <div>Contact Us Here</div>,
       },
     ],
   },

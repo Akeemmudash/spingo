@@ -3,11 +3,11 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import PropTypes from "prop-types";
 
-SearchButton.propTypes = {
+SearchToggler.propTypes = {
   onClick: PropTypes.func,
 };
 
-function SearchButton({ onClick }) {
+function SearchToggler({ onClick }) {
   return (
     <button onClick={onClick} className="btn-reset" aria-label="Search">
       <svg
@@ -81,7 +81,7 @@ export default function Search() {
   return (
     <>
       <SearchButton onClick={handleShow} />
-      <Modal show={show} onHide={handleClose} centered>
+      <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Modal heading</Modal.Title>
         </Modal.Header>

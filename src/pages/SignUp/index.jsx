@@ -1,6 +1,9 @@
+import SignIn from "./SignIn";
+import SignUp from "./SignUp";
+import SignModel from "./SignModel";
 
-export default function SignUp() {
-  return (
-    <div>SignUp</div>
-  )
+export {
+    SignIn,
+    SignUp,
+    SignModel
 }

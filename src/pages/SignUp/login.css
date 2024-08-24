@@ -1,0 +1,125 @@
+.smallScreen {
+  display: flex;
+}
+.logo-container {
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+
+.Dlogo {
+  position: absolute;
+  top: 20px;
+  left: 35%;
+  width: 200px;
+}
+
+.displayImage {
+  width: 100%;
+  height: 100vh;
+}
+
+.details {
+  padding: 200px 100px;
+}
+.card {
+  width: 90%;
+  border: none;
+}
+.headings {
+  margin-bottom: 20px;
+}
+.headings h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--primary-500);
+  margin-bottom: 10px;
+}
+.headings p {
+  font-size: 15px;
+  color: var(--primary-900);
+}
+.headings span {
+  color: var(--secondary-base);
+  font-weight: 800;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+input {
+  border: none;
+  border-bottom: 1px solid var(--primary-300);
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.login__options {
+  display: flex;
+  justify-content: space-between;
+}
+.dtick span {
+  color: var(--secondary-600);
+}
+.dtick p {
+  color: var(--primary-800);
+}
+.dtick {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+.BigBtn {
+  background-color: var(--secondary-700);
+  color: var(--primary-100);
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-radius: 10px;
+}
+@media (max-width: 998px) {
+  .smallScreen {
+    display: block;
+    flex-direction: column;
+  }
+  .displayImage{
+    height: 400px;
+    width: -webkit-fill-available;
+  }
+  .details{
+    padding: 30px;
+  }
+  .bigScreen {
+    display: none;
+  }
+  .Dlogo {
+    position: absolute;
+    top: 20px;
+    left: 35%;
+    width: 150px;
+  }
+  .card{
+    width: 100%;
+  }
+
+  .input{
+    margin-bottom: 10px;
+  }
+  .dtick p{
+    font-size: 12px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .Dlogo{
+        left: 40%;
+    }
+}
+@media (max-width: 420px) {
+    .dtick{
+        gap: 3px;
+    }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import SignModel from "../SignUp/SignModel"; // Ensure this is the correct path
-import { ImageBig, WhiteLogo } from "../../assets"; // Ensure these imports are correct
+import { ImageBig, ImageSmall, WhiteLogo } from "../../assets"; // Ensure these imports are correct
 
 const SignUp = () => {
   return (
@@ -8,6 +8,7 @@ const SignUp = () => {
       <SignModel
         WebDP={WhiteLogo}
         WebImg={ImageBig}
+        WebImg2={ ImageSmall }
         Sign="Sign Up"
         Account={
           <>

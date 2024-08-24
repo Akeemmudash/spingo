@@ -13,6 +13,8 @@ will be here as css variables
   --primary-500: #00172f;
   --primary-600: #001326;
   --primary-700: #000b16;
+  --primary-800: #9c9a9b;
+  --primary-900: #7c797a;
 
   --secondary-base: #00bfff;
   --secondary-100: #e6f9ff;
@@ -20,6 +22,8 @@ will be here as css variables
   --secondary-300: #b0ebff;
   --secondary-400: #00ace6;
   --secondary-500: #008fbf;
+  --secondary-600: #203b57;
+  --secondary-700: #001f3f;
 
   --base-black: #141718;
 }

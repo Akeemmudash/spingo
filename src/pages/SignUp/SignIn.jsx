@@ -1,6 +1,6 @@
 import React from "react";
 import { SignModel } from "../SignUp";
-import { ImageBig, WhiteLogo, } from "../../assets";
+import { ImageBig, ImageSmall, WhiteLogo, } from "../../assets";
 
 
 const SignIn = () => {
@@ -9,6 +9,7 @@ const SignIn = () => {
       <SignModel
         WebDP={ WhiteLogo }
         WebImg={ ImageBig }
+        WebImg2={ ImageSmall }
         Sign="Sign In"
         Account={
           <>

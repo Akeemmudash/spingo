@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 /* 
 Color palette 
 will be here as css variables
@@ -25,6 +25,9 @@ will be here as css variables
   --secondary-600: #203b57;
   --secondary-700: #001f3f;
 
+  --base-gray: #7c797a;
+  --gray-100: #e6e9ec;
+
   --base-black: #030206;
 }
 
@@ -46,6 +49,9 @@ will be here as css variables
 }
 .text-black {
   color: var(--base-black);
+}
+.text-base-gray {
+  color: var(--base-gray);
 }
 .bg-black-base {
   background-color: var(--base-black);
@@ -97,6 +103,11 @@ will be here as css variables
 .h-6 {
   height: 24px;
 }
+
+.lh-\[24px\] {
+  line-height: 24px;
+}
+
 .btn-reset {
   appearance: none;
   background: none;
@@ -111,9 +122,27 @@ will be here as css variables
 button:focus:not(:focus-visible) {
   box-shadow: none;
 }
+.btn-animation {
+  transition: transform 0.3s ease;
+}
+.btn-animation:active {
+  transform: scale(0.95);
+}
+
 body {
+  font-family: "Open Sauce One", sans-serif;
 }
 
 .layout {
   height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: var(--base-black);
+  font-family: inherit;
+}
+
+a:hover {
+  opacity: 0.85;
 }

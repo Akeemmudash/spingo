@@ -1,10 +1,19 @@
-import Hero from "./Hero";
-import Header from "../../components/Header";
+import HeroSection from "./HeroSection";
+import FeaturedSection from "./FeaturedSection";
+import CategoriesSection from "./CategoriesSection";
+import ShopCollectionSection from "./ShopCollectionSection";
+import BannerSection from "./BannerSection";
+import ValuesSection from "./ValuesSection";
 
 export default function Home() {
   return (
-    <div>
-      <Hero />
-    </div>
+    <>
+      <HeroSection />
+      <FeaturedSection />
+      <CategoriesSection />
+      <ValuesSection />
+      <BannerSection />
+      <ShopCollectionSection />
+    </>
   );
 }

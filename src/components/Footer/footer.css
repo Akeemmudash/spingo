@@ -1,0 +1,12 @@
+.join-news-letter {
+  background-image: url("../../assets/footer-banner.png");
+  height: 360px;
+}
+.news-letter__form {
+  max-width: 405px;
+}
+
+::placeholder {
+  color: white;
+  opacity: 1;
+}

@@ -1,0 +1,30 @@
+.quantity-stepper {
+  display: inline-flex;
+  border: 1px solid var(--base-gray);
+}
+
+.quantity-input {
+  outline: none;
+  max-width: 30px;
+  line-height: 32px;
+  border: 0;
+  text-align: center;
+}
+
+.decrement-btn,
+.increment-btn {
+  width: 30px;
+  fill: var(--base-gray);
+  stroke: var(--base-gray);
+
+  transition: stroke 0.2s ease, fill 0.2s ease, transform 0.2s ease;
+}
+.decrement-btn:hover,
+.increment-btn:hover {
+  fill: var(--base-black);
+  stroke: var(--base-black);
+}
+.decrement-btn:active,
+.increment-btn:active {
+  transform: scale(0.91);
+}

@@ -90,7 +90,7 @@ function DropdownTab({ title, isDropShowing }) {
   );
 }
 
-export function Navhamburger({ onShow }) {
+function Navhamburger({ onShow }) {
   return (
     <button
       className=" hamburger-btn btn-reset w-6 h-auto d-lg-none p-1"

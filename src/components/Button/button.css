@@ -1,0 +1,21 @@
+.normal-btn {
+  padding: 0.5em 0.8em;
+  color: #fff;
+  background-color: var(--primary-base);
+}
+
+.outline-btn {
+  background-color: #fff;
+  padding: 0.5em 0.8em;
+}
+
+.normal-btn:hover {
+  opacity: 0.97;
+}
+.outline-btn:hover {
+  background-color: #f5f4f9;
+}
+
+.close-btn:hover {
+  fill: red;
+}

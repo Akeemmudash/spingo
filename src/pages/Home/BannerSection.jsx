@@ -9,7 +9,7 @@ const BannerSection = () => {
             <img src={ BannerImg } alt="" className='banner-img' />
           </div>
           <div className="banner-content">
-            <p>Limited Edition</p>
+            <p>LIMITED EDITION</p>
             <h2>Hurry Up! 30% OFF</h2>
             <span>Offer expires in:</span>
             <div className="timer">

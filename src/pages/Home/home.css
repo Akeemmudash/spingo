@@ -244,6 +244,7 @@
   padding: 100px 0px 0px 50px;
 }
 .banner-content h1 {
+  font-size: 20px;
 }
 
 /* New Letter Section */
@@ -267,4 +268,7 @@
 }
 .form-control::placeholder {
   color: white;
+}
+.banner-content p{
+    color: #008fcc;
 }

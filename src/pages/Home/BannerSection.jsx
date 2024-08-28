@@ -11,6 +11,7 @@ const BannerSection = () => {
           <div className="banner-content">
             <p>LIMITED EDITION</p>
             <h2>Hurry Up! 30% OFF</h2>
+            <p className=''>Find clubs that are right for your game</p>
             <span>Offer expires in:</span>
             <div className="timer">
               <div className="timer-count">

@@ -1,12 +1,26 @@
-.join-news-letter {
-  background-image: url("../../assets/footer-banner.png");
-  height: 360px;
-}
-.news-letter__form {
-  max-width: 405px;
+.footer__nav .divider {
+  width: 2px;
+  height: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: var(--base-gray);
 }
 
-::placeholder {
-  color: white;
-  opacity: 1;
+.footer__bottom .policy {
+  border-left: 1px solid var(--base-gray);
+}
+
+@media screen and (max-width: 996px) {
+  .footer__nav .divider {
+    height: 1px;
+    width: 14px;
+    margin: 8px auto 10px;
+  }
+  .footer__bottom .policy {
+    border: 0;
+  }
+
+  .payment-methods img {
+    width: 48px;
+  }
 }

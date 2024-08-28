@@ -25,8 +25,11 @@ will be here as css variables
   --secondary-600: #203b57;
   --secondary-700: #001f3f;
 
+  --white-100: #fefefe;
+
   --base-gray: #7c797a;
-  --gray-100: #e6e9ec;
+  --gray-100: #e8ecef;
+  --gray-200: #e6e9ec;
 
   --base-black: #030206;
 }
@@ -53,6 +56,9 @@ will be here as css variables
 .text-base-gray {
   color: var(--base-gray);
 }
+.text-gray-100 {
+  color: var(--gray-100);
+}
 .bg-black-base {
   background-color: var(--base-black);
 }
@@ -63,7 +69,12 @@ will be here as css variables
 .bg-primary-600 {
   background-color: var(--primary-600);
 }
-
+.bg-gray-base {
+  background-color: var(--base-gray);
+}
+.w-0\.5 {
+  width: 2px;
+}
 .w-1 {
   width: 4px;
 }
@@ -103,7 +114,9 @@ will be here as css variables
 .h-6 {
   height: 24px;
 }
-
+.border-base-gray {
+  border-color: var(--base-black);
+}
 .lh-\[24px\] {
   line-height: 24px;
 }
@@ -134,15 +147,15 @@ body {
 }
 
 .layout {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 a {
   text-decoration: none;
-  color: var(--base-black);
   font-family: inherit;
+  color: inherit;
 }
 
-a:hover {
+.link:hover {
   opacity: 0.85;
 }

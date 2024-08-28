@@ -13,7 +13,7 @@ export default function Header() {
     <div>
       <PromoBar />
       <header className="header">
-        <Container className="d-flex justify-content-between align-items-center">
+        <Container className="d-flex justify-content-between align-items-center py-4">
           <Navbar />
           <div className="header__icons d-flex justify-content-between align-items-center ">
             <div className="d-none d-md-flex gap-3">

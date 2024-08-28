@@ -118,7 +118,7 @@ function NavBody() {
       <NavLink
         to="/"
         className={({ isActive }) =>
-          `nav-link nav__link ${isActive ? "fw-bold" : ""}`
+          `nav-link nav__link ${isActive ? "active fw-semibold" : ""}`
         }
       >
         Home

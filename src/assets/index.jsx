@@ -6,6 +6,17 @@ import WebLogo from "./website-logo.png";
 import ImageSmall from "./Login/Image Placeholder Small.png";
 import ImageBig from "./Login/Image PlaceholderBig.png";
 import WhiteLogo from "./Login/VESCAN white 1.png";
+import HeroImg from "./home/Landing Page/Slider Section.png";
+import HeroImgS from "./home/Landing Page/Hero Section.png";
+import ClutchKibs from "./home/categories/clutch-kibs.png";
+import ControlArms from "./home/categories/control-arms.png";
+import FuelPumps from "./home/categories/fuel-pumps.png";
+import OilFilters from "./home/categories/oil-filters.png";
+import SparkPlugs from "./home/categories/spark-plugs.png";
+import WheelBearings from "./home/categories/wheel-bearings.png";
+import BannerImg from "./home/Landing Page/Image Placeholder.png";
+
+
 
 export {
   ArrowRight,
@@ -15,5 +26,14 @@ export {
   WebLogo,
   ImageSmall,
   ImageBig,
-  WhiteLogo
+  WhiteLogo,
+  HeroImg,
+  HeroImgS,
+  ClutchKibs,
+  ControlArms,
+  FuelPumps,
+  OilFilters,
+  SparkPlugs,
+  WheelBearings,
+  BannerImg
 };

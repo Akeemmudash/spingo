@@ -1,5 +1,256 @@
+@import "@fontsource/open-sauce-one";
+
+* {
+  font-family: "Open Sauce One", sans-serif;
+}
+
+.hero-section {
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+}
+
+.overlay-container {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  color: white;
+  width: 30%;
+  padding: 20px;
+}
+
+.overlay-container h1 {
+  font-size: 4.3rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  font-family: coolvetica;
+  letter-spacing: 5px;
+}
+
+.overlay-container span {
+  background: linear-gradient(180deg, #555555, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-family: coolvetica;
+  letter-spacing: 5px;
+}
+
+.overlay-container p {
+  font-size: 20px;
+  font-weight: 100;
+  margin-bottom: 1.5rem;
+  font-family: Open-Sauce-One;
+}
+
+.btn.skyBtn {
+  padding: 0.75rem 3rem;
+  background-color: #00aaff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-family: Open-Sauce-One;
+}
+
+.btn.skyBtn:hover {
+  background-color: #008fcc;
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 998px) {
+  .overlay-container {
+    top: 65%;
+    text-align: center;
+    padding: 10px;
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .overlay-container h1 {
+    font-size: 3rem;
+  }
+
+  .overlay-container p {
+    font-size: 16px;
+  }
+  .breakpoint {
+    display: none;
+  }
+  .btn.skyBtn {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 999px) and (max-width: 1280px) {
+  .overlay-container {
+    top: 50%;
+    text-align: left;
+    padding: 10px;
+    width: 70%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+  }
+
+  .overlay-container h1 {
+    font-size: 3.4rem;
+  }
+
+  .overlay-container p {
+    font-size: 16px;
+  }
+  .btn.skyBtn {
+    font-size: 15px;
+  }
+}
+@media (max-width: 400px) {
+  .overlay-container {
+    top: 70%;
+  }
+  .overlay-container h1 {
+    font-size: 2.4rem;
+  }
+}
+@media (min-width: 650px) and (max-width: 768px) {
+  .overlay-container p {
+    font-size: 1.2rem;
+  }
+}
+
+/* CategoriesSection */
+
+.categories-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.categories-section h1 {
+  font-family: coolvetica;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+  padding: 20px;
+}
+
+.category-item {
+  flex: 1 1 150px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.category-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.category-item p {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .category-item p {
+    font-size: 16px;
+  }
+}
+
+/* Value section */
+.value-section {
+  padding: 20px;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px;
+}
+.value-item {
+  background-color: #f3f5f7;
+  border-radius: 8px;
+}
+.contain {
+  padding: 30px 130px 30px 30px;
+}
+.value-icon {
+  font-size: 40px;
+}
+.value-info {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: coolvetica;
+  margin-top: 10px;
+}
+.value-pin {
+  font-size: 14px;
+  font-family: open-sauce-one;
+  color: grey;
+  margin-top: 10px;
+}
+
+@media (max-width: 1023px) {
+  .value-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px;
+  }
+  .contain {
+    padding: 20px 65px 20px 20px;
+  }
+  .value-info {
+    font-size: 16px;
+  }
+  .value-pin {
+    font-size: 13px;
+  }
+}
+
+/* Banner Section */
+
+.banner-section {
+  display: flex;
+  background-color: #001326;
+}
+.banner {
+  max-width: 500px;
+}
+.banner-img {
+  width: 100%;
+  height: 100%;
+}
+.banner-content {
+  padding: 100px 0px 0px 50px;
+}
+.banner-content h1 {
+}
+
+/* New Letter Section */
 .news-letter {
   background-image: url("../../assets/footer-banner.png");
+  background-size: cover;
+  background-position: 0 0;
   height: 360px;
   padding-inline: 32px;
 }

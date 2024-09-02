@@ -232,6 +232,13 @@
 .banner-section {
   display: flex;
   background-color: #001326;
+<<<<<<< HEAD
+=======
+}
+.banner-section {
+  display: flex;
+  background-color: #001326;
+>>>>>>> c98192ca53d12ec8e7abdbcd4078332d75a2e557
   gap: 10px;
 }
 .banner {
@@ -244,6 +251,12 @@
 .banner-content {
   padding: 100px 0px 0px 50px;
 }
+<<<<<<< HEAD
 .banner-content p {
   color: #008fcc;
 }
+=======
+.banner-content p{
+    color: #008fcc;
+}
+>>>>>>> c98192ca53d12ec8e7abdbcd4078332d75a2e557

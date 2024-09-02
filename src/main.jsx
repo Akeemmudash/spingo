@@ -15,6 +15,8 @@ import { SignIn, SignUp } from "./pages/SignUp";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
+import Shop from "./pages/Shop";
+import Products from "./pages/Shop/Products";
 
 const queryClient = new QueryClient();
 const router = createBrowserRouter([
@@ -28,14 +30,18 @@ const router = createBrowserRouter([
       },
       {
         path: "shop",
-        element: <h1>Shop</h1>,
+        element: <Shop />,
       },
       {
-        path: "/blog",
+        path: "shop/:id/product",
+        element: <Products />,
+      },
+      {
+        path: "blog",
         element: <div>This is blog</div>,
       },
       {
-        path: "/contact",
+        path: "contact",
         element: <div>Contact Us Here</div>,
       },
     ],

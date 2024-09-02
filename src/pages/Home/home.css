@@ -232,13 +232,10 @@
 .banner-section {
   display: flex;
   background-color: #001326;
-.banner-section {
-  display: flex;
-  background-color: #001326;
   gap: 10px;
 }
-.banner{
-    max-width: 500px;
+.banner {
+  max-width: 500px;
 }
 .banner-img {
   width: 100%;
@@ -247,6 +244,6 @@
 .banner-content {
   padding: 100px 0px 0px 50px;
 }
-.banner-content p{
-    color: #008fcc;
+.banner-content p {
+  color: #008fcc;
 }

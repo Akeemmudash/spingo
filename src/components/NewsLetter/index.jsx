@@ -1,5 +1,5 @@
 import { Form, InputGroup } from "react-bootstrap";
-
+import "./newsletter.css";
 export default function NewsLetter() {
   return (
     <section className="news-letter d-flex justify-content-center align-items-center flex-column text-white">
@@ -34,7 +34,7 @@ export default function NewsLetter() {
             color="#fff"
             aria-label="Username"
             type="email"
-            className="border-0  shadow-none mb-0 bg-transparent text-white"
+            className="form__input border-0 shadow-none mb-0 bg-transparent text-white"
           />
           <button className="btn-reset text-white ">Sign Up</button>
         </InputGroup>

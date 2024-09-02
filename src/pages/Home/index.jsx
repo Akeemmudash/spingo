@@ -4,7 +4,7 @@ import CategoriesSection from "./CategoriesSection";
 import ShopCollectionSection from "./ShopCollectionSection";
 import BannerSection from "./BannerSection";
 import ValuesSection from "./ValuesSection";
-import NewsLetter from "./NewsLetter";
+import NewsLetter from "../../components/NewsLetter";
 import "./home.css";
 export default function Home() {
   return (

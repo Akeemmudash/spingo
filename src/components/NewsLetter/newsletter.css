@@ -1,0 +1,15 @@
+/* New Letter Section */
+.news-letter {
+  background-image: url("../../assets/footer-banner.png");
+  background-size: cover;
+  background-position: 0 0;
+  height: 360px;
+  padding-inline: 32px;
+}
+.news-letter__form {
+  max-width: 405px;
+}
+.form__input::placeholder {
+  color: white;
+  opacity: 1;
+}

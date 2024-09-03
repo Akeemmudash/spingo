@@ -8,7 +8,7 @@
   position: relative;
 }
 
-.image-container {
+.hero-container {
   position: relative;
 }
 
@@ -232,31 +232,85 @@
 .banner-section {
   display: flex;
   background-color: #001326;
-<<<<<<< HEAD
-=======
 }
 .banner-section {
   display: flex;
   background-color: #001326;
->>>>>>> c98192ca53d12ec8e7abdbcd4078332d75a2e557
-  gap: 10px;
+  align-items: center;
+  gap: 30px;
 }
 .banner {
-  max-width: 500px;
+  max-width: 50%;
 }
 .banner-img {
   width: 100%;
   height: 100%;
 }
-.banner-content {
-  padding: 100px 0px 0px 50px;
+.banner-header{
+  font-size: 16px;
+  font-weight: 700;
+  color: #008fcc !important;
+  line-height: 20px;
 }
-<<<<<<< HEAD
-.banner-content p {
-  color: #008fcc;
+.banner-content h2{
+  font-size: 40px;
+  font-weight: 700;
+  font-family: open-sauce-one;
+  color: #f3f5f7;
 }
-=======
+.banner-content p, span{
+  color: #fff;
+  font-weight: 400;
+}
 .banner-content p{
-    color: #008fcc;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
->>>>>>> c98192ca53d12ec8e7abdbcd4078332d75a2e557
+.banner-content span{
+  font-size: 16px;
+}
+.timer {
+  margin-top: 10px;
+}
+
+.timer-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+.timer-unit {
+  font-size: 28px;
+  font-weight: bold;
+  padding: 5px 15px;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+.shopping-btn {
+  padding: 10px 20px;
+  background-color: #00aaff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.shopping-btn:hover {
+  background-color: grey;
+  color: #fff;
+}
+@media (max-width:  998px) {
+  .banner-section{
+    flex-direction: column;
+    gap: 20px;
+  }
+  .banner{
+    max-width: 100%
+  }
+  .shopping-btn{
+    margin-bottom: 50px;
+  }
+}
+

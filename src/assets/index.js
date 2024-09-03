@@ -17,6 +17,12 @@ import OilFilters from "./home/categories/oil-filters.png";
 import SparkPlugs from "./home/categories/spark-plugs.png";
 import WheelBearings from "./home/categories/wheel-bearings.png";
 import BannerImg from "./home/Landing Page/Image Placeholder.png";
+import ModelFemale from "../assets/Shop/avatar_placeholder copy.png";
+import RedFemale from "../assets/Shop/avatar_placeholder.png";
+import BrownMale from "../assets/Shop/avatar_placeholder1.png";
+import SmilingFemale from "../assets/Shop/avatar_placeholder2.png";
+import CoolMale from "../assets/Shop/avatar_placeholder3.png";
+
 
 export {
   ArrowRight,
@@ -38,4 +44,9 @@ export {
   SparkPlugs,
   WheelBearings,
   BannerImg,
+  ModelFemale,
+  RedFemale,
+  BrownMale,
+  SmilingFemale,
+  CoolMale
 };

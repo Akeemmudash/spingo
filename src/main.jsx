@@ -19,6 +19,7 @@ import "./index.css";
 import Shop from "./pages/shop";
 import Products from "./pages/shop/Products";
 import ContactUs from "./pages/ContactUs/index";
+import NotFound from "./pages/NotFound/NotFound";
 
 const queryClient = new QueryClient();
 const router = createBrowserRouter([
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <div><ContactUs /></div>,
+      },
+      {
+        path: "*", // This will match all undefined routes
+        element: <NotFound />,
       },
     ],
   },

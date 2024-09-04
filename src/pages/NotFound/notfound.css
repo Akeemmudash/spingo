@@ -1,0 +1,35 @@
+.notfound-container {
+  margin: 0;
+}
+
+canvas {
+  z-index: -1;
+  top: 100px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+.notfound-container h1 {
+    margin-top: 100px;
+  font-size: 60px;
+  line-height: 50px;
+  font-weight: 700;
+  color: #fff;
+}
+.notfound-container p {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 500;
+  color: #fff;
+}
+.notfound-container button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #008fcc;
+  color: #fff;
+  border-radius: 10px;
+}
+.notfound-container button:hover {
+  background-color: grey;
+}

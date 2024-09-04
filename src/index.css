@@ -1,9 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.cdnfonts.com/css/coolvetica");
 /* 
 Color palette 
 will be here as css variables
 */
-@import url("https://fonts.cdnfonts.com/css/coolvetica");
+/* Default styles (Light mode) */
+/* Light mode styles */
+/* body {
+  background-color: #f0f0f0;
+  color: #333;
+} */
+
+/* Dark mode styles */
+/* @media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+} */
+
+/* Example for buttons */
+/* button {
+  background-color: #007bff;
+  color: white;
+} */
+
+/* @media (prefers-color-scheme: dark) {
+  button {
+    background-color: #007bff;
+    color: #ccc;
+  }
+}
+} */
+
+
 :root {
   --primary-base: #001f3f;
   --primary-100: #e6e9ec;

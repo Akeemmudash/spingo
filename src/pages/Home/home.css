@@ -180,19 +180,17 @@
 
 /* Value section */
 .value-section {
-  padding: 20px;
-  text-align: left;
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin: 10px;
+  margin: 20px 0px;
 }
 .value-item {
   background-color: #f3f5f7;
   border-radius: 8px;
 }
 .contain {
-  padding: 30px 130px 30px 30px;
+  padding: 30px 120px 30px 30px;
 }
 .value-icon {
   font-size: 40px;

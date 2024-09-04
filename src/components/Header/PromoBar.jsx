@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import ticketPercent from "../../assets/ticket-percent.svg";
 import closeIcon from "../../assets/close-icon.svg";
-import arrowRight from "../../assets/arrow-right.svg";
+import Button from "../Button";
 
 export default function PromoBar() {
   const [show, setShow] = React.useState(true);
@@ -18,12 +18,9 @@ export default function PromoBar() {
             className="promo-bar__icon"
           />
           <span className="ms-3">30% Off Storewide — Limited Time! </span>
-          <span className="ms-2 ring-bottom d-sm-block d-none">
-            Shop Now{" "}
-            <span>
-              <img src={arrowRight} alt="arrow-right" className="h-5" />
-            </span>
-          </span>
+          <Button type="link" className="ms-3" to="/shop">
+            Shop Now
+          </Button>
         </p>
       </Link>
       <button

@@ -13,7 +13,8 @@ const CategoriesSection = () => {
     {
       ProductImg: FuelPumps,
       ProductName: "Fuel Pumps",
-      ProductDescription: "High-quality fuel pumps for efficient fuel delivery.",
+      ProductDescription:
+        "High-quality fuel pumps for efficient fuel delivery.",
     },
     {
       ProductImg: OilFilters,
@@ -38,31 +39,35 @@ const CategoriesSection = () => {
     {
       ProductImg: ClutchKibs,
       ProductName: "Clutch Kits",
-      ProductDescription: "Complete clutch kits for a smooth driving experience.",
+      ProductDescription:
+        "Complete clutch kits for a smooth driving experience.",
     },
   ];
 
   return (
-    <section className="categories-section">
-      <h1>Shop by Categories</h1>
-      <div className="categories">
+    <section className="categories-section container ">
+      <h2 className="">Shop by Categories</h2>
+      <div className="categories row section__body">
         {categories.map((category, index) => (
-          <OverlayTrigger
-            key={index}
-            trigger={["hover", "focus"]}
-            placement="top"
-            overlay={
-              <Popover id={`popover-${index}`}>
-                <Popover.Header as="h3">{category.ProductName}</Popover.Header>
-                <Popover.Body>{category.ProductDescription}</Popover.Body>
-              </Popover>
-            }
-          >
-            <div className="category-item">
-              <img src={category.ProductImg} alt={category.ProductName} />
-              <p>{category.ProductName}</p>
-            </div>
-          </OverlayTrigger>
+          <div className="col-6 col-md-4" key={index}>
+            <OverlayTrigger
+              trigger={["hover", "focus"]}
+              placement="top"
+              overlay={
+                <Popover id={`popover-${index}`}>
+                  <Popover.Header as="h3">
+                    {category.ProductName}
+                  </Popover.Header>
+                  <Popover.Body>{category.ProductDescription}</Popover.Body>
+                </Popover>
+              }
+            >
+              <div className="category-item">
+                <img src={category.ProductImg} alt={category.ProductName} />
+                <p>{category.ProductName}</p>
+              </div>
+            </OverlayTrigger>
+          </div>
         ))}
       </div>
     </section>

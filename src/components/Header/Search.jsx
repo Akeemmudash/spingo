@@ -54,7 +54,7 @@ export default function Search() {
             <Form.Control
               type="text"
               placeholder="Search"
-              className=" fs-4 mb-0 shadow-none border-0"
+              className=" fs-5 mb-0 shadow-none border-0"
               aria-label="Search"
               role="search"
               ref={inputRef}

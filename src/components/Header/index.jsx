@@ -10,10 +10,10 @@ import PromoBar from "./PromoBar";
 
 export default function Header() {
   return (
-    <div>
+    <div className="position-fixed w-100 top-0 z-3 bg-white">
       <PromoBar />
-      <header className="header">
-        <Container className="d-flex justify-content-between align-items-center py-4">
+      <header className="header ">
+        <Container className="d-flex justify-content-between align-items-center py-2">
           <Navbar />
           <div className="header__icons d-flex justify-content-between align-items-center ">
             <div className="d-none d-md-flex gap-3">

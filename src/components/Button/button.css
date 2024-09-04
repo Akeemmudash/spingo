@@ -8,12 +8,21 @@
   background-color: #fff;
   padding: 0.5em 0.8em;
 }
-
+.link-btn {
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.1em;
+}
 .normal-btn:hover {
   opacity: 0.97;
 }
 .outline-btn:hover {
   background-color: #f5f4f9;
+}
+.link-btn .arrow-right {
+  transition: transform 0.1s ease-out;
+}
+.link-btn:hover .arrow-right {
+  transform: translateX(3px);
 }
 
 .close-btn:hover {

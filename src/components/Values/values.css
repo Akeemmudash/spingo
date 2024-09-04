@@ -1,0 +1,47 @@
+/* Value section */
+.value-section {
+  /* padding: 20px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px; */
+}
+.value-item {
+  background-color: #f3f5f7;
+  border-radius: 8px;
+  padding: 2em 1.5em;
+}
+
+.value-icon {
+  font-size: 40px;
+}
+.value-info {
+  font-weight: 700;
+  font-size: clamp(16px, 2vw, 20px);
+  margin-top: 10px;
+}
+.value-pin {
+  color: grey;
+  margin-top: 10px;
+  font-size: clamp(14px, 2vw, 16px);
+}
+
+@media (max-width: 575px) {
+  .value-item {
+    padding: 1.8em 1.3em;
+    height: 210px;
+  }
+}
+/* 
+  @media (max-width: 1023px) {
+    .contain {
+      padding: 20px 65px 20px 20px;
+    }
+    .value-info {
+      font-size: 16px;
+    }
+    .value-pin {
+      font-size: 13px;
+    }
+  } */

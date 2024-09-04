@@ -1,33 +1,60 @@
-import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import './home.css';
-import Card from "../../components/Card/Card";
+import "./home.css";
+import ProductCard from "../../components/ProductCard";
+import sampleImage from "../../assets/productImageSamples/spark-plugs.png";
+import { useState } from "react";
 
 export default function FeaturedSection() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   return (
-    <section className="featured-section">
-      <div className="featured-heading">
-        <h2>Featured Products</h2>
-      </div>
-      <div className="featured-carousel">
-        <Carousel
-          showArrows={true}
-          showThumbs={false}
-          autoPlay
-          infiniteLoop
-          interval={3000}
-          stopOnHover
-          showStatus={false}
-          showIndicators={true}
-        >
-          <div>
-            <img src="image1.jpg" alt="Product 1" />
-            <div className="card-wrapper">
-              <Card />
+    <section className="featured-section mt-5">
+      <div className="container">
+        <div className="row">
+          <div className="featured__heading d-flex justify-content-between align-items-center">
+            <h2 className="font-primary mb-0">Featured</h2>
+            <div className="featured__pagination d-flex gap-1">
+              {new Array(5).fill(2).map((_, index) => (
+                <span
+                  key={index}
+                  className={`pagination-el d-block ${
+                    activeIndex === index ? "active " : ""
+                  }`}
+                  onClick={() => setActiveIndex(index)}
+                >
+                  <span className="pagination-el__bullet d-block"></span>
+                </span>
+              ))}
             </div>
           </div>
-        </Carousel>
+          <div className="featured__products section__body overflow-hidden">
+            <div className="featured__carousel d-flex gap-3">
+              <ProductCard
+                productName={"ClutchForce - Precision Clutch Kit"}
+                productImage={sampleImage}
+                productPrice={24.99}
+                discount={10}
+              />
+              <ProductCard
+                productName={"ClutchForce - Precision Clutch Kit"}
+                productImage={sampleImage}
+                productPrice={24.99}
+                discount={10}
+              />
+              <ProductCard
+                productName={"ClutchForce - Precision Clutch Kit"}
+                productImage={sampleImage}
+                productPrice={24.99}
+                discount={10}
+              />
+              <ProductCard
+                productName={"ClutchForce - Precision Clutch Kit"}
+                productImage={sampleImage}
+                productPrice={24.99}
+                discount={10}
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

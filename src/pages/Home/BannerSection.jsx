@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { BannerImg } from "../../assets";
 import "./home.css";
 
@@ -42,12 +43,32 @@ const BannerSection = () => {
     return () => clearInterval(timer);
   }, [targetDate]);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   return (
-    <div className="banner-section">
-      <div className="banner">
+    <motion.div
+      className="banner-section"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <motion.div className="banner" variants={itemVariants}>
         <img src={BannerImg} alt="Promotional Banner" className="banner-img" />
-      </div>
-      <div className="banner-content">
+      </motion.div>
+      <motion.div className="banner-content" variants={itemVariants}>
         <p className="banner-header">LIMITED EDITION</p>
         <h2>Hurry Up! 30% OFF</h2>
         <p>Find clubs that are right for your game</p>
@@ -61,8 +82,8 @@ const BannerSection = () => {
           </div>
         </div>
         <button className="btn shopping-btn">Shopping Now</button>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

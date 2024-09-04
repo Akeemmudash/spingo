@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import "./shop.css";
 import AdditionalItem from "./AdditionalItem";
 import Questions from "./Questions";
@@ -38,14 +39,42 @@ const Products = () => {
               </p>
             </div>
             
-            <div className={`sectionContent ${activeSection === "additionalInfo" ? "active" : ""}`}>
-              {activeSection === "additionalInfo" && <AdditionalItem />}
-            </div>
-            <div className={`sectionContent ${activeSection === "questions" ? "active" : ""}`}>
-              {activeSection === "questions" && <Questions />}
-            </div>
-            <div className={`sectionContent ${activeSection === "reviews" ? "active" : ""}`}>
-              {activeSection === "reviews" && <Review />}
+            <div className="sectionContent">
+              <AnimatePresence>
+                {activeSection === "additionalInfo" && (
+                  <motion.div
+                    key="additionalInfo"
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <AdditionalItem />
+                  </motion.div>
+                )}
+                {activeSection === "questions" && (
+                  <motion.div
+                    key="questions"
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <Questions />
+                  </motion.div>
+                )}
+                {activeSection === "reviews" && (
+                  <motion.div
+                    key="reviews"
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <Review />
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           </div>
           <div className="col-sm-12 col-md-12 col-lg-1"></div>

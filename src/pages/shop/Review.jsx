@@ -1,4 +1,5 @@
-import React, { useState } from "react"; // Import useState
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import "./shop.css";
 import {
   ModelFemale,
@@ -123,7 +124,14 @@ const Review = () => {
         </div>
         <div className="reviews-list">
           {reviews.map((review) => (
-            <div key={review.id} className="review-item">
+            <motion.div
+              key={review.id}
+              className="review-item"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.3 }}
+            >
               <img src={review.picture} alt="" />
               <div className="review-details">
                 <div className="review-header">
@@ -137,25 +145,43 @@ const Review = () => {
                 </div>
                 <p className="reviewP">{review.text}</p>
                 <div className="btns d-flex">
-                  <p
+                  <motion.p
                     onClick={() => toggleLike(review.id)}
                     className={review.liked ? "liked" : ""}
+                    initial={{ scale: 1 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ duration: 0.2 }}
                   >
                     {review.liked ? "Unlike" : "Like"}
-                  </p>
-                  <p onClick={() => toggleReply(review.id)}>Reply</p>
+                  </motion.p>
+                  <motion.p
+                    onClick={() => toggleReply(review.id)}
+                    initial={{ scale: 1 }}
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    Reply
+                  </motion.p>
                 </div>
-                {review.replying && (
-                  <div className="reply-input">
-                    <input
-                      type="text"
-                      placeholder="Write your reply..."
-                      className="form-control"
-                    />
-                  </div>
-                )}
+                <AnimatePresence>
+                  {review.replying && (
+                    <motion.div
+                      className="reply-input"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <input
+                        type="text"
+                        placeholder="Write your reply..."
+                        className="form-control"
+                      />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -1,3 +1,5 @@
+import React from "react";
+import { motion } from "framer-motion";
 import {
   FuelPumps,
   OilFilters,
@@ -42,8 +44,28 @@ const CategoriesSection = () => {
     },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   return (
-    <section className="categories-section">
+    <motion.section
+      className="categories-section"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <h1>Shop by Categories</h1>
       <div className="categories">
         {categories.map((category, index) => (
@@ -58,14 +80,17 @@ const CategoriesSection = () => {
               </Popover>
             }
           >
-            <div className="category-item">
+            <motion.div
+              className="category-item"
+              variants={itemVariants}
+            >
               <img src={category.ProductImg} alt={category.ProductName} />
               <p>{category.ProductName}</p>
-            </div>
+            </motion.div>
           </OverlayTrigger>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

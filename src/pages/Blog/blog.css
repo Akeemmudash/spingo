@@ -1,0 +1,93 @@
+/* PageHeader */
+.pageheader {
+  position: relative;
+}
+
+.breadcrumb-item {
+  color: aliceblue;
+}
+.breadcrumb-item.active {
+  color: white;
+}
+
+.header-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.header-overlay img {
+  width: 100%;
+  max-width: 70%;
+  height: 50dvh;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  z-index: 1;
+  text-align: center;
+}
+
+.text-overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.text-overlay p {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+@media (max-width: 576px) {
+  .text-overlay h1 {
+    font-size: 1.5rem;
+  }
+
+  .text-overlay p {
+    font-size: 1rem;
+  }
+
+  .header-overlay img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .text-overlay p {
+    font-size: 1.1rem;
+  }
+
+  .header-overlay img {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 992px) {
+  .text-overlay h1 {
+    font-size: 2.2rem;
+  }
+
+  .text-overlay p {
+    font-size: 1.1rem;
+  }
+
+  .header-overlay img {
+    max-width: 80%;
+  }
+}

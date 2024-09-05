@@ -285,8 +285,7 @@ s {
 .article__title {
   font-size: clamp(16px, 1vw, 20px);
 }
-.articles__grid {
-}
+
 @media (max-width: 991px) {
   .articles__grid > *:last-child {
     display: none;

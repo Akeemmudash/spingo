@@ -5,8 +5,7 @@ h2 {
 }
 
 .hero-section {
-  height: calc(100vh - 40px);
-  margin-top: 40px;
+  height: calc(100vh - var(--site-header-height));
 }
 
 .hero-img {
@@ -22,7 +21,6 @@ h2 {
 
 .hero__heading {
   font-size: 4.3rem;
-  font-weight: 900;
   margin-top: 2rem;
   letter-spacing: 2px;
 }
@@ -99,9 +97,6 @@ h2 {
   }
 }
 @media (max-width: 400px) {
-  .overlay-container {
-    top: 70%;
-  }
   .overlay-container h1 {
     font-size: 2.4rem;
   }
@@ -188,30 +183,79 @@ h2 {
 
 /* Banner Section */
 
-.banner-section {
-  display: flex;
-  background-color: #001326;
-}
-.banner-section {
-  display: flex;
-  background-color: #001326;
-  gap: 10px;
-}
 .banner {
-  max-width: 500px;
+  max-width: 50%;
 }
 .banner-img {
   width: 100%;
   height: 100%;
 }
-.banner-content {
-  padding: 100px 0px 0px 50px;
+.banner-header {
+  font-size: 16px;
+  font-weight: 700;
+  color: #008fcc !important;
+  line-height: 20px;
 }
 .banner-content p {
   color: #008fcc;
 }
 .banner-content p {
   color: #008fcc;
+}
+.banner-content h2 {
+  font-size: 40px;
+  color: #f3f5f7;
+}
+.banner-content p,
+s {
+  color: #fff;
+  font-weight: 400;
+}
+
+.banner-content span {
+  font-size: 16px;
+}
+.timer {
+  margin-top: 10px;
+}
+
+.timer-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+.timer-unit {
+  font-size: 28px;
+  font-weight: bold;
+  padding: 5px 15px;
+  background-color: white;
+  color: black;
+}
+.shopping-btn {
+  padding: 10px 20px;
+  background-color: #00aaff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.shopping-btn:hover {
+  background-color: grey;
+  color: #fff;
+}
+@media (max-width: 991px) {
+  /* .banner-section {
+    flex-direction: column;
+    gap: 20px;
+  } */
+  .banner {
+    max-width: 100%;
+  }
+  /* .shopping-btn {
+    margin-bottom: 50px;
+  } */
 }
 
 /* ShopCollection  */
@@ -240,4 +284,11 @@ h2 {
 }
 .article__title {
   font-size: clamp(16px, 1vw, 20px);
+}
+.articles__grid {
+}
+@media (max-width: 991px) {
+  .articles__grid > *:last-child {
+    display: none;
+  }
 }

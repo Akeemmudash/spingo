@@ -10,19 +10,19 @@ export default function PromoBar() {
 
   return show ? (
     <div className="promo-bar bg-primary-600 position-relative w-100 px-4">
-      <Link to="/shop" className="text-decoration-none text-white mx-auto">
-        <p className="mb-0 fs-8 d-flex align-items-center fw-medium lh-lg">
+      <p className="mb-0 fs-8 d-flex align-items-center fw-medium lh-lg text-white">
+        <Link to="/shop" className="text-decoration-none  mx-auto">
           <img
             src={ticketPercent}
             alt="Promo icon"
             className="promo-bar__icon"
           />
           <span className="ms-3">30% Off Storewide — Limited Time! </span>
-          <Button type="link" className="ms-3" to="/shop">
-            Shop Now
-          </Button>
-        </p>
-      </Link>
+        </Link>
+        <Button type="link" className="ms-3 d-none d-sm-block" to="/shop">
+          Shop Now
+        </Button>
+      </p>
       <button
         onClick={() => setShow(false)}
         className="close-button shadow-none border-0 bg-transparent h-5 d-flex justify-content-center align-items-center "

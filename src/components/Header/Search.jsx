@@ -40,13 +40,13 @@ export default function Search() {
         contentClassName="rounded-pill overflow-hidden"
       >
         <Form
-          className="mb-0"
+          className="mb-0 py-0"
           onSubmit={handleSubmit}
           id="search"
           name="search"
         >
           <InputGroup className="">
-            <InputGroup.Text className="bg-white">
+            <InputGroup.Text className="bg-white border-0">
               <button className="btn-reset btn-animation">
                 <SearchIcon />
               </button>

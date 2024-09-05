@@ -2,7 +2,7 @@ import { Form, InputGroup } from "react-bootstrap";
 import "./newsletter.css";
 export default function NewsLetter() {
   return (
-    <section className="news-letter  text-white">
+    <section className="news-letter  text-white mt-5">
       <div className="container d-flex justify-content-center align-items-center flex-column section__body h-100">
         <h2 className="">Join Our Newsletter</h2>
         <p className="mt-2 text-center">

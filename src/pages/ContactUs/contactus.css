@@ -1,0 +1,147 @@
+/* Contact Header  */
+.contact-info h2 {
+  font-size: 54px;
+  font-weight: 400;
+  width: 80%;
+}
+.contact-info p {
+  font-size: 16px;
+  line-height: 26px;
+  width: 80%;
+}
+@media (max-width: 998px) {
+  .contact-info h2, .contact-info p {
+    width: 100%;
+  }
+}
+/* Feature Section  */
+
+.contact-section {
+  display: flex;
+  background-color: #f3f5f7;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+.contact {
+  max-width: 50%;
+}
+.contact-img {
+  width: 100%;
+  height: 100%;
+}
+.contact-header {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #000;
+}
+.contact-content h2 {
+  font-size: 40px;
+  font-weight: 700;
+  font-family: open-sauce-one;
+  color: #000;
+}
+.contact-header {
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 26px;
+}
+.contact-header span {
+  color: #008fcc;
+}
+.contact-btn {
+  padding: 10px 20px;
+  color: black;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid black;
+  cursor: pointer;
+}
+
+.contact-btn:hover {
+  background-color: grey;
+  color: #fff;
+}
+@media (max-width: 998px) {
+  .contact-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .contact {
+    max-width: 100%;
+  }
+  .contact-btn {
+    margin-bottom: 50px;
+  }
+}
+/* Contact Section  */
+.card-section{
+    display: flex;
+    gap: 20px;
+}
+.contact-icon{
+    font-size: 24px;
+}
+.card-title, .card-text{
+    font-size: 16px;
+    line-height: 16px;
+}
+.card-text{
+    font-weight: 600;
+}
+.card-title{
+    color: #72797a;
+    font-weight: 700;
+}
+.contact-apply{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+form{
+    display: flex;
+    gap: 25px;
+    padding: 10px;
+}
+input{
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+label{
+    color: #7c797a;
+    font-size: 14px;
+    font-weight: 700;
+}
+.dframer{
+    padding: 10px;
+    width: 100%;
+    max-width: 50%;
+}
+.sendMessage{
+    padding: 10px 20px;
+    width: 50%;
+    background-color: #001f3f;
+    color: #fff;
+    border: none;
+}
+.sendMessage:hover{
+    background-color: grey;
+}
+
+@media (max-width: 998px) {
+    .card-section{
+        flex-direction: column;
+    }
+    .contact-apply{
+        flex-direction: column;
+    }
+    .sendMessage{
+        width: 100%;
+    }
+    .dframer{
+        max-width: 100%;
+        padding: 10px;
+    }
+}

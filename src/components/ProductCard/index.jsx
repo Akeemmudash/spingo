@@ -25,7 +25,7 @@ export default function ProductCard({
   console.log("oldPrice", oldPrice);
 
   return (
-    <div className="product-card d-flex flex-column rounded-3 overflow-hidden ">
+    <div className="product-card d-flex flex-column rounded-3 overflow-hidden justify-content-between">
       <div className="card__head rounded-3 position-relative overflow-hidden">
         <div className="card__img h-full">
           <img
@@ -54,8 +54,8 @@ export default function ProductCard({
         <div className="product__rating" title="5 out of 5">
           <StarRating rating={5} />
         </div>
-        <h3 className="card__title fw-bold fs-6">{productName}</h3>
-        <p className="product__price mt-auto fs-7 ">
+        <h3 className="card__title fw-bold fs-6 mt-2">{productName}</h3>
+        <p className="product__price mt-auto fs-7 mb-0">
           <span className="fw-bold">{price}</span>
           <span className="text-decoration-line-through ms-2">{oldPrice}</span>
         </p>

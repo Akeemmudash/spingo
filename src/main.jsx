@@ -2,6 +2,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import "@fontsource/open-sauce-one";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 
 import {
   QueryClient,
@@ -15,8 +16,9 @@ import { SignIn, SignUp } from "./pages/SignUp";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import Shop from "./pages/Shop";
-import Products from "./pages/Shop/Products";
+import Shop from "./pages/shop";
+import Products from "./pages/shop/Products";
+import ContactUs from "./pages/ContactUs/index";
 
 const queryClient = new QueryClient();
 const router = createBrowserRouter([
@@ -42,7 +44,7 @@ const router = createBrowserRouter([
       },
       {
         path: "contact",
-        element: <div>Contact Us Here</div>,
+        element: <div><ContactUs /></div>,
       },
     ],
   },

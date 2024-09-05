@@ -1,10 +1,12 @@
+.site-header {
+  z-index: 1000;
+}
 .promo-bar {
   height: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .close-button {
   right: 16px;
   transition: opacity 0.1s ease-in;

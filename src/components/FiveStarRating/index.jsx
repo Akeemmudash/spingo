@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './FiveStarRating.css';
 
-const FiveStarRating = ({ rating = 0, onRate }) => {
+const FiveStarRating = ({ rating = 0, onRate, className = '' }) => {
   const [hoveredRating, setHoveredRating] = useState(0);
   const [currentRating, setCurrentRating] = useState(rating);
 
@@ -21,7 +21,7 @@ const FiveStarRating = ({ rating = 0, onRate }) => {
   };
 
   return (
-    <div className="star-rating">
+    <div className={`star-rating ${className}`}>
       {[1, 2, 3, 4, 5].map((star) => (
         <Star
           key={star}

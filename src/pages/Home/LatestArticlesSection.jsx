@@ -11,7 +11,7 @@ export default function LatestArticlesSection() {
         </Button>
       </div>
       <div className="section__body">
-        <div className="row">
+        <div className="articles__grid row ">
           <div className="col-md-6 col-lg-4 col-12">
             <ArticleCard title="Enhancing Vehicle Maintenance" />
           </div>

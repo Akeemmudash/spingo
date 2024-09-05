@@ -1,7 +1,5 @@
-import { Link } from "react-router-dom";
 import { clutchKits, brakePads, sparkPlugs } from "../../assets/shopCollection";
 import PropTypes from "prop-types";
-import ArrowRight from "../../assets/ArrowRight";
 import Button from "../../components/Button";
 
 const data = [
@@ -27,7 +25,7 @@ export default function ShopCollectionSection() {
     <section className="shop-collection-section container mt-5">
       <h2 className="text-center text-lg-start">Shop Collection</h2>
       <div className="section__body">
-        <div className="row w-100 mx-0">
+        <div className="row">
           <div className="col-12 col-md-6">
             <ShopCollectionCard collection={clutch} />
           </div>

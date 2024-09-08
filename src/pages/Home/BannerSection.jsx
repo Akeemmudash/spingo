@@ -4,7 +4,7 @@ import { BannerImg } from "../../assets";
 import "./home.css";
 
 const BannerSection = () => {
-  const targetDate = new Date("2024-11-31T23:59:59").getTime();
+  const targetDate = new Date("2024-11-30T23:59:59").getTime();
 
   const [timeLeft, setTimeLeft] = useState({
     days: "00",

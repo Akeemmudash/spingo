@@ -15,6 +15,8 @@ import "./index.css";
 import Shop from "./pages/shop";
 import Products from "./pages/shop/Products";
 import ContactUs from "./pages/ContactUs/index";
+import Blog from "./pages/Blog/Blog";
+import BlogPost from "./pages/Blog/BlogPost";
 import NotFound from "./pages/NotFound/NotFound";
 
 const queryClient = new QueryClient();
@@ -37,7 +39,11 @@ const router = createBrowserRouter([
       },
       {
         path: "blog",
-        element: <div>This is blog</div>,
+        element: <div><Blog /></div>,
+      },
+      {
+        path: "blog/:id/blogpost",
+        element: <div><BlogPost /></div>,
       },
       {
         path: "contact",
@@ -48,7 +54,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "*", // This will match all undefined routes
+        path: "*",
         element: <NotFound />,
       },
     ],

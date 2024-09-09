@@ -495,3 +495,8 @@
         display: block;
     }
 }
+@media (max-width: 680px) {
+    .moreArticles{
+        width: 80%;
+    }
+}

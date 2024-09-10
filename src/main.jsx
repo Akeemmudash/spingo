@@ -17,6 +17,8 @@ import Products from "./pages/shop/Products";
 import ContactUs from "./pages/ContactUs/index";
 import Blog from "./pages/Blog/Blog";
 import BlogPost from "./pages/Blog/BlogPost";
+import Cart from "./pages/Cart/Cart";
+import MyAccount from "./pages/MyAccount/Account";
 import NotFound from "./pages/NotFound/NotFound";
 
 const queryClient = new QueryClient();
@@ -39,17 +41,41 @@ const router = createBrowserRouter([
       },
       {
         path: "blog",
-        element: <div><Blog /></div>,
+        element: (
+          <div>
+            <Blog />
+          </div>
+        ),
       },
       {
         path: "blog/:id/blogpost",
-        element: <div><BlogPost /></div>,
+        element: (
+          <div>
+            <BlogPost />
+          </div>
+        ),
       },
       {
         path: "contact",
         element: (
           <div>
             <ContactUs />
+          </div>
+        ),
+      },
+      {
+        path: "cart",
+        element: (
+          <div>
+            <Cart />
+          </div>
+        ),
+      },
+      {
+        path: "account",
+        element: (
+          <div>
+            <MyAccount />
           </div>
         ),
       },

@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import { AccountInfo, AddressInfo, OrderInfo, Wishlist } from "../MyAccount";
-import { SignIn } from "../SignUp";
 
 const MyAccount = () => {
   const [activeSection, setActiveSection] = useState("AccountInfo");
 
   const handleSectionClick = (section) => {
     if (section === "Logout") {
-      // Redirect to the Sign In page
-      window.location.href = "/login-in"; // Change "/sign-in" to your Sign In page route
+      window.location.href = "/login-in";
       return;
     }
     setActiveSection(section);

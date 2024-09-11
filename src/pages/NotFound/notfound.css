@@ -1,35 +1,95 @@
-.notfound-container {
-  margin: 0;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e4e4e4;
 }
 
-canvas {
-  z-index: -1;
-  top: 100px;
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: fixed;
+.notfound {
+  text-align: center;
+  padding: 50px;
+  background-color: #f2f2f2;
+  min-height: 100vh;
 }
-.notfound-container h1 {
-    margin-top: 100px;
+
+.notfound--title {
+  font-size: 70px;
+  color: #ff4757;
+}
+
+.notfound--text {
+  font-size: 24px;
+  margin: 10px 0;
+  color: #2f3542;
+}
+
+.game--title {
+  font-size: 30px;
+  color: #1f1f1f;
+  margin: 30px auto;
+  opacity: 0.9;
+}
+
+.game--container {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 5px;
+  margin: 20px auto;
+  justify-content: center;
+}
+
+.cell {
+  font-family: "Permanent Marker", cursive;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  line-height: 100px;
   font-size: 60px;
-  line-height: 50px;
-  font-weight: 700;
-  color: #fff;
+  background-color: #2f3542;
+  color: #70a1ff;
+  transition: background-color 0.3s;
 }
-.notfound-container p {
-  font-size: 40px;
-  line-height: 40px;
-  font-weight: 500;
-  color: #fff;
+
+.cell:hover {
+  background-color: #57606f;
 }
-.notfound-container button {
+
+.game--winner {
+  font-size: 50px;
+  color: #ff6b81;
+  margin: 20px auto;
+}
+
+.game--status {
+  font-size: 24px;
+  color: #2f3542;
+}
+
+.game--restart {
+  background-color: #ffa502;
+  color: white;
   padding: 10px 20px;
   border: none;
-  background-color: #008fcc;
-  color: #fff;
-  border-radius: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
 }
-.notfound-container button:hover {
-  background-color: grey;
+
+.game--restart:hover {
+  background-color: #ff7f50;
+}
+
+.homepage--btn {
+  background-color: #70a1ff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.homepage--btn:hover {
+  background-color: #5352ed;
 }

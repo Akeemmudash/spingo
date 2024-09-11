@@ -188,8 +188,8 @@ const Checkout = () => {
             Place Order
           </button>
         </div>
-        <OrderSummary />
       </div>
+        <OrderSummary />
     </div>
   );
 };

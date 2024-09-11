@@ -81,7 +81,66 @@ h3 {
 }
 
 /* Cartside */
+
 /* Checkout  */
+.checkout{
+    justify-content: space-around;
+}
+.checkout-container {
+    padding: 20px;
+  }
+  
+  .formInfo {
+    flex: 1;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .payment-method hr {
+    margin: 1rem 0;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 992px) {
+    .checkout {
+      flex-direction: column;
+    }
+  }
+  
 @media (max-width: 998px) {
     .checkout, .shoppingCart{
         flex-direction: column;

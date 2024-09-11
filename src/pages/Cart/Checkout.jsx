@@ -3,37 +3,37 @@ import OrderSummary from "./OrderSummary";
 
 const Checkout = () => {
   return (
-    <div>
+    <div className="checkout-container">
       <div className="checkout d-flex">
-        <div className="formInfo">
+        <div className="formInfo flex-fill">
           <div className="contactInformation">
             <div className="container">
-              <h3>Contact Information</h3>
+              <h3 className="section-title">Contact Information</h3>
               <form>
-                <div>
-                  <label htmlFor="firstName">
-                    First Name
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      placeholder="First name"
-                      required
-                    />
-                  </label>
-                  <label htmlFor="lastName">
-                    Last Name
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      placeholder="Last name"
-                      required
-                    />
-                  </label>
+                <div className="d-flex">
+                <div className="form-group">
+                  <label htmlFor="firstName">First Name</label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    placeholder="First name"
+                    required
+                  />
                 </div>
-                <label htmlFor="phoneNumber">
-                  Phone Number
+                <div className="form-group">
+                  <label htmlFor="lastName">Last Name</label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    placeholder="Last name"
+                    required
+                  />
+                </div>
+                </div>
+                <div className="form-group">
+                  <label htmlFor="phoneNumber">Phone Number</label>
                   <input
                     type="tel"
                     id="phoneNumber"
@@ -41,9 +41,9 @@ const Checkout = () => {
                     placeholder="Phone number"
                     required
                   />
-                </label>
-                <label htmlFor="emailAddress">
-                  Email Address
+                </div>
+                <div className="form-group">
+                  <label htmlFor="emailAddress">Email Address</label>
                   <input
                     type="email"
                     id="emailAddress"
@@ -51,17 +51,17 @@ const Checkout = () => {
                     placeholder="Your Email address"
                     required
                   />
-                </label>
+                </div>
               </form>
             </div>
           </div>
 
-          <div className="shipping-address">
+          <div className="shipping-address mt-4">
             <div className="container">
-              <h3>Shipping Address</h3>
+              <h3 className="section-title">Shipping Address</h3>
               <form>
-                <label htmlFor="streetAddress">
-                  Street Address
+                <div className="form-group">
+                  <label htmlFor="streetAddress">Street Address</label>
                   <input
                     type="text"
                     id="streetAddress"
@@ -69,9 +69,9 @@ const Checkout = () => {
                     placeholder="Street Address"
                     required
                   />
-                </label>
-                <label htmlFor="country">
-                  Country
+                </div>
+                <div className="form-group">
+                  <label htmlFor="country">Country</label>
                   <input
                     type="text"
                     id="country"
@@ -79,9 +79,9 @@ const Checkout = () => {
                     placeholder="Country"
                     required
                   />
-                </label>
-                <label htmlFor="city">
-                  Town / City
+                </div>
+                <div className="form-group">
+                  <label htmlFor="city">Town / City</label>
                   <input
                     type="text"
                     id="city"
@@ -89,30 +89,30 @@ const Checkout = () => {
                     placeholder="Town / city"
                     required
                   />
-                </label>
-                <div>
-                  <label htmlFor="state">
-                    State
-                    <input
-                      type="text"
-                      id="state"
-                      name="state"
-                      placeholder="State"
-                      required
-                    />
-                  </label>
-                  <label htmlFor="zipCode">
-                    Zip Code
-                    <input
-                      type="text"
-                      id="zipCode"
-                      name="zipCode"
-                      placeholder="Zip Code"
-                      required
-                    />
-                  </label>
                 </div>
-                <div>
+                <div className="d-flex">
+                <div className="form-group justify-content-between">
+                  <label htmlFor="state">State</label>
+                  <input
+                    type="text"
+                    id="state"
+                    name="state"
+                    placeholder="State"
+                    required
+                  />
+                </div>
+                <div className="form-group justify-content-between">
+                  <label htmlFor="zipCode">Zip Code</label>
+                  <input
+                    type="text"
+                    id="zipCode"
+                    name="zipCode"
+                    placeholder="Zip Code"
+                    required
+                  />
+                </div>
+                </div>
+                <div className="form-group">
                   <input
                     type="checkbox"
                     id="differentBilling"
@@ -126,21 +126,31 @@ const Checkout = () => {
             </div>
           </div>
 
-          <div className="payment-method">
+          <div className="payment-method mt-4">
             <div className="container">
-              <h3>Payment Method</h3>
+              <h3 className="section-title">Payment Method</h3>
               <form>
-                <div>
-                  <input type="radio" id="creditCard" name="payment" />
-                  <label htmlFor="creditCard">Pay by Card Credit</label>
+                <div className="form-group">
+                  <input
+                    type="radio"
+                    id="creditCard"
+                    name="payment"
+                    value="creditCard"
+                  />
+                  <label htmlFor="creditCard">Pay by Credit Card</label>
                 </div>
-                <div>
-                  <input type="radio" id="paypal" name="payment" />
+                <div className="form-group">
+                  <input
+                    type="radio"
+                    id="paypal"
+                    name="payment"
+                    value="paypal"
+                  />
                   <label htmlFor="paypal">Paypal</label>
                 </div>
                 <hr />
-                <label htmlFor="cardNumber">
-                  Card Number
+                <div className="form-group">
+                  <label htmlFor="cardNumber">Card Number</label>
                   <input
                     type="number"
                     id="cardNumber"
@@ -148,33 +158,35 @@ const Checkout = () => {
                     placeholder="1234 1234 1234"
                     required
                   />
-                </label>
-                <div>
-                  <label htmlFor="expiryDate">
-                    Expiration Date
-                    <input
-                      type="text"
-                      id="expiryDate"
-                      name="expiryDate"
-                      placeholder="MM/YY"
-                      required
-                    />
-                  </label>
-                  <label htmlFor="cvc">
-                    CVC
-                    <input
-                      type="number"
-                      id="cvc"
-                      name="cvc"
-                      placeholder="CVC code"
-                      required
-                    />
-                  </label>
+                </div>
+                <div className="d-flex">
+                <div className="form-group justify-content-between">
+                  <label htmlFor="expiryDate">Expiration Date</label>
+                  <input
+                    type="text"
+                    id="expiryDate"
+                    name="expiryDate"
+                    placeholder="MM/YY"
+                    required
+                  />
+                </div>
+                <div className="form-group justify-content-between">
+                  <label htmlFor="cvc">CVC</label>
+                  <input
+                    type="number"
+                    id="cvc"
+                    name="cvc"
+                    placeholder="CVC code"
+                    required
+                  />
+                </div>
                 </div>
               </form>
             </div>
           </div>
-          <button type="submit">Place Order</button>
+          <button type="submit" className="btn btn-primary mt-4">
+            Place Order
+          </button>
         </div>
         <OrderSummary />
       </div>

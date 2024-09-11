@@ -11,7 +11,14 @@ const CartPage = () => {
   return (
     <div>
       <div className="cartpage">
-        <h1 className="text-center">Cart</h1>
+        <h1
+          className={`text-center ${
+            activeSection === "CheckoutDetails" ? "checkout-active" : ""
+          }`}
+        >
+          Cart
+        </h1>
+
         <div className="process">
           <div
             className={`process-frame ${
@@ -22,7 +29,7 @@ const CartPage = () => {
             <div className="number-circle">
               <span className="number">1</span>
             </div>
-            <h3>Shopping Cart</h3>
+            <h3 className="process-title">Shopping Cart</h3>
           </div>
           <div
             className={`process-frame ${
@@ -33,7 +40,7 @@ const CartPage = () => {
             <div className="number-circle">
               <span className="number">2</span>
             </div>
-            <h3>Checkout details</h3>
+            <h3 className="process-title">Checkout details</h3>
           </div>
           <div
             className={`process-frame ${
@@ -44,7 +51,7 @@ const CartPage = () => {
             <div className="number-circle">
               <span className="number">3</span>
             </div>
-            <h3>Order complete</h3>
+            <h3 className="process-title">Order complete</h3>
           </div>
         </div>
 

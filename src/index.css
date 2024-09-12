@@ -61,7 +61,7 @@ will be here as css variables
   --rating-gold: #f86624;
   --base-black: #030206;
 
-  --site-header-height: 88px;
+  scrollbar-gutter: stable;
 }
 
 /* utility classes  */
@@ -80,6 +80,9 @@ will be here as css variables
 }
 .text-inherit {
   color: inherit;
+}
+.text-base-primary {
+  color: var(--primary-base);
 }
 .text-base-black {
   color: var(--base-black);
@@ -157,6 +160,9 @@ will be here as css variables
 .border-base-gray {
   border-color: var(--base-gray);
 }
+.border-gray-100 {
+  border-color: var(--gray-100);
+}
 .border-base-black {
   border-color: var(--base-black);
 }
@@ -169,7 +175,6 @@ will be here as css variables
   appearance: none;
   background: none;
   border: none;
-  padding: 0;
   margin: 0;
   font: inherit;
   color: inherit;
@@ -188,10 +193,15 @@ button:focus:not(:focus-visible) {
 }
 
 body {
+  --site-header-height: 76px;
   font-family: "Open Sauce One", sans-serif;
+  color: var(--base-black);
 }
 h2 {
   font-size: clamp(30px, 4vw, 40px);
+  margin-bottom: 0;
+}
+p {
   margin-bottom: 0;
 }
 .section__body {
@@ -201,7 +211,7 @@ h2 {
 
 .layout {
   min-height: 100vh;
-  margin-top: var(--site-header-height);
+  scrollbar-gutter: stable;
 }
 
 a {
@@ -217,12 +227,16 @@ a {
   .row > * {
     --bs-gutter-y: 1rem;
   }
+  body {
+    --site-header-height: 76px;
+  }
 }
 @media screen and (max-width: 575px) {
   .row > * {
     --bs-gutter-x: 0.5rem;
     --bs-gutter-y: 0.5rem;
   }
+
   .container {
     padding-inline: 2rem;
   }

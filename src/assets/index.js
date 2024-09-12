@@ -1,6 +1,5 @@
 import primaryLogo from "./website-logo.png";
 import whiteLogo from "./logo-white.png";
-import ArrowRight from "./arrow-right.svg";
 import ChevronDown from "./chevron-down.svg";
 import CloseIcon from "./close-icon.svg";
 import TicketPercent from "./ticket-percent.svg";
@@ -23,9 +22,7 @@ import BrownMale from "../assets/Shop/avatar_placeholder1.png";
 import SmilingFemale from "../assets/Shop/avatar_placeholder2.png";
 import CoolMale from "../assets/Shop/avatar_placeholder3.png";
 
-
 export {
-  ArrowRight,
   ChevronDown,
   CloseIcon,
   TicketPercent,
@@ -48,5 +45,5 @@ export {
   RedFemale,
   BrownMale,
   SmilingFemale,
-  CoolMale
+  CoolMale,
 };

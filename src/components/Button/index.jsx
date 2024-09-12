@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import "./button.css";
-import ArrowRight from "../../assets/ArrowRight";
+import { ArrowRight } from "../../assets/icons";
 import { Link } from "react-router-dom";
 Button.propTypes = {
   props: PropTypes.object,
@@ -8,6 +8,8 @@ Button.propTypes = {
   className: PropTypes.string,
   fullWidth: PropTypes.bool,
   to: PropTypes.string,
+  onClick: PropTypes.func,
+  variant: PropTypes.string,
   type: PropTypes.oneOf(["outline", "filled", "link"]),
 };
 
@@ -16,6 +18,8 @@ export default function Button({
   type,
   fullWidth,
   className,
+  onClick,
+  variant,
   to,
   props,
 }) {
@@ -35,6 +39,7 @@ export default function Button({
     return (
       <Link
         to={to}
+        onClick={onClick}
         {...props}
         className={`link-btn  ${className} ${
           fullWidth === true ? "w-100" : ""
@@ -50,7 +55,8 @@ export default function Button({
   return (
     <button
       {...props}
-      className={`${buttonType} rounded-3 fw-medium border-0  ${className}  ${
+      onClick={onClick}
+      className={`${buttonType} rounded-3 fw-medium ${variant} ${className}  ${
         fullWidth === true ? "w-100" : ""
       }`}
     >

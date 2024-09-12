@@ -1,4 +1,3 @@
-import React from "react";
 import { LoginBig } from "../../../assets";
 
 const Login = () => {
@@ -29,7 +28,10 @@ const Login = () => {
                 checked
                 disabled
               />
-              <p>I agree with <span>Privacy Policy</span> and <span>Terms of Use</span> </p>
+              <p>
+                I agree with <span>Privacy Policy</span> and{" "}
+                <span>Terms of Use</span>{" "}
+              </p>
             </div>
             <button type="submit">Sign Up</button>
           </div>

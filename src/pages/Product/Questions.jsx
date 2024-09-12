@@ -28,7 +28,7 @@ const Questions = () => {
 
   return (
     <div>
-      <h3>Frequently Asked Questions</h3>
+      <h2>Frequently Asked Questions</h2>
       <p>
         This section contains answers to commonly asked questions about the
         product.

@@ -1,7 +1,11 @@
 import { useState } from "react";
 import "./quantity-stepper.css";
+import PropTypes from "prop-types";
 
-export default function QuantityStepper() {
+QuantityStepper.propTypes = {
+  type: PropTypes.oneOf[("filled", "outline")],
+};
+export default function QuantityStepper({ type = "outline" }) {
   const [stepperValue, setStepperValue] = useState(1);
 
   const increaseStepperValue = () => {
@@ -13,7 +17,11 @@ export default function QuantityStepper() {
   };
 
   return (
-    <div className="quantity-stepper rounded-2  align-items-center">
+    <div
+      className={`quantity-stepper rounded-2  align-items-center ${
+        type === "outline" ? "outline" : "filled"
+      }`}
+    >
       <button
         className="decrement-btn btn-reset"
         onClick={decreaseStepperValue}

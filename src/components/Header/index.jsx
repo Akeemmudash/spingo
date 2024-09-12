@@ -1,14 +1,14 @@
 import Container from "react-bootstrap/Container";
 
 import "./header.css";
-
-import Navbar from "./Navbar";
-import Search from "./Search";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import FlyoutCart from "./FlyoutCart";
+import Navbar from "./Navbar";
 import Profile from "./Profile";
 import PromoBar from "./PromoBar";
-import { motion, useMotionValueEvent, useScroll } from "framer-motion";
-import { useState } from "react";
+import Search from "./Search";
+import useStickyHeader from "../../hooks/useStickyHeader";
 
 const variants = {
   visible: {
@@ -20,28 +20,32 @@ const variants = {
 };
 
 export default function Header() {
-  const [isHidden, setIsHidden] = useState(false);
-  const { scrollY } = useScroll();
+  const [isPromoBarShowing, setIsPromoBarShowing] = useState(true);
+  const isHidden = useStickyHeader();
+  const headerRef = useRef(null);
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    const previous = scrollY.getPrevious();
-    console.log(latest, previous);
+  useEffect(() => {
+    document.body.style.setProperty(
+      "--site-header-height",
+      `${headerRef.current.clientHeight}px`
+    );
+    console.log("first", headerRef.current.clientHeight);
+  }, [isPromoBarShowing]);
 
-    if (latest > previous && latest > 100) setIsHidden(true);
-    else {
-      setIsHidden(false);
-    }
-  });
   return (
     <motion.header
-      className="site-header position-fixed w-100 top-0 bg-white"
+      className="site-header position-sticky w-100 top-0 bg-white"
+      ref={headerRef}
       variants={variants}
       animate={isHidden ? "hidden" : "visible"}
       transition={{ duration: 0.2, ease: "easeInOut" }}
     >
-      <PromoBar />
+      <PromoBar
+        ShowPromoBar={isPromoBarShowing}
+        setShowPromoBar={setIsPromoBarShowing}
+      />
       <div className="main-header">
-        <Container className="d-flex justify-content-between align-items-center py-2">
+        <Container className="d-flex justify-content-between align-items-center py-3 py-lg-2">
           <Navbar />
           <div className="header__icons d-flex justify-content-between align-items-center ">
             <div className="d-none d-md-flex gap-3">

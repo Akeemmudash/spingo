@@ -1,8 +1,9 @@
 import "./product-card.css";
 import PropTypes from "prop-types";
-import StarRating from "./StarRating";
+import StarRating from "../StarRating";
 import { formatToUSD } from "../../utils/formatToUSD";
 import Button from "../Button";
+import { LikeIcon } from "../../assets/icons";
 
 ProductCard.propTypes = {
   productImage: PropTypes.string,
@@ -45,6 +46,9 @@ export default function ProductCard({
             </span>
           )}
         </div>
+        <button className="card__like-btn position-absolute top-0 end-0 mt-3 me-3 btn-reset p-2 bg-white rounded-circle ">
+          <LikeIcon />
+        </button>
 
         <Button className="add-to-cart__btn  position-absolute  start-0 bottom-0 mb-3">
           Add to Cart

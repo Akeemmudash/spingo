@@ -1,0 +1,23 @@
+.timer {
+  margin-top: 10px;
+}
+
+.timer-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+}
+.timer-box-content .timer-unit {
+  font-size: 28px;
+  font-weight: bold;
+  padding: 5px 15px;
+  background-color: white;
+  color: black;
+}
+.timer.gray-bg .timer-unit {
+  background-color: var(--base-gray);
+}
+.timer.gray .timer-unit {
+  background-color: var(--gray-100);
+}

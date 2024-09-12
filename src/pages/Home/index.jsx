@@ -7,6 +7,8 @@ import Values from "../../components/Values";
 import NewsLetter from "../../components/NewsLetter";
 import "./home.css";
 import LatestArticlesSection from "./LatestArticlesSection";
+
+
 export default function Home() {
   return (
     <>

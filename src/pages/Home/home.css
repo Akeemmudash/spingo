@@ -215,30 +215,13 @@ s {
 .banner-content span {
   font-size: 16px;
 }
-.timer {
-  margin-top: 10px;
-}
 
-.timer-box {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  border-radius: 10px;
-}
-
-.timer-unit {
-  font-size: 28px;
-  font-weight: bold;
-  padding: 5px 15px;
-  background-color: white;
-  color: black;
-}
 .shopping-btn {
-  padding: 10px 20px;
+  /* padding: 10px 20px;
   background-color: #00aaff;
   color: #fff;
   border: none;
-  cursor: pointer;
+  cursor: pointer; */
 }
 
 .shopping-btn:hover {

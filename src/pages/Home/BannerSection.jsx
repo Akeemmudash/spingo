@@ -2,46 +2,11 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { BannerImg } from "../../assets";
 import "./home.css";
+import OfferCountDown from "../../components/OfferCountDown.tsx";
+import Button from "../../components/Button/index.jsx";
 
 const BannerSection = () => {
-  const targetDate = new Date("2024-11-30T23:59:59").getTime();
-
-  const [timeLeft, setTimeLeft] = useState({
-    days: "00",
-    hours: "00",
-    minutes: "00",
-    seconds: "00",
-  });
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
-
-      if (distance < 0) {
-        clearInterval(timer);
-      } else {
-        setTimeLeft({
-          days: String(Math.floor(distance / (1000 * 60 * 60 * 24))).padStart(
-            2,
-            "0"
-          ),
-          hours: String(
-            Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-          ).padStart(2, "0"),
-          minutes: String(
-            Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
-          ).padStart(2, "0"),
-          seconds: String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(
-            2,
-            "0"
-          ),
-        });
-      }
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, [targetDate]);
+  const dateTimeString = "2024-11-30T23:59:59";
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -76,16 +41,12 @@ const BannerSection = () => {
           <p className="banner-header fw-semibold">LIMITED EDITION</p>
           <h2>Hurry Up! 30% OFF</h2>
           <p>Find clubs that are right for your game</p>
-          <span className="text-white">Offer expires in:</span>
-          <div className="timer">
-            <div className="timer-box">
-              <div className="timer-unit">{timeLeft.days}</div>
-              <div className="timer-unit">{timeLeft.hours}</div>
-              <div className="timer-unit">{timeLeft.minutes}</div>
-              <div className="timer-unit">{timeLeft.seconds}</div>
-            </div>
+          <div className="mt-4">
+            <OfferCountDown dateTimeString={dateTimeString} />
           </div>
-          <button className="btn shopping-btn mt-4 mt-md-5">Shop Now</button>
+          <Button variant={"secondary"} className="shopping-btn mt-4 mt-md-5">
+            Shop Now
+          </Button>
         </div>
       </motion.div>
     </motion.div>

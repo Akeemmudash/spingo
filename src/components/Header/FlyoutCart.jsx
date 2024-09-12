@@ -56,7 +56,7 @@ export default function FlyoutCart() {
               </Button>
               <Button
                 type="outline"
-                className="text-decoration-underline"
+                className="text-decoration-underline text-base-black link-offset-2"
                 fullWidth
               >
                 View Cart

@@ -1,15 +1,15 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Nav, NavDropdown } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Logo from "../Logo";
 
 export default function Navbar() {
-  const [show, setShow] = useState(false);
+  const [isShowing, setIsShowing] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleClose = () => setIsShowing(false);
+  const handleShow = () => setIsShowing(true);
   return (
     <>
       <div className="d-flex align-items-center gap-1">
@@ -19,17 +19,7 @@ export default function Navbar() {
       <Nav className="font-secondary d-none d-lg-flex">
         <NavBody />
       </Nav>
-      <Offcanvas show={show} onHide={handleClose} className="d-lg-none">
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>
-            {" "}
-            <Logo />
-          </Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body className="nav__small-screen d-flex justify-content-center align-items-center flex-column ">
-          <NavBody />
-        </Offcanvas.Body>
-      </Offcanvas>
+      <NavbarForMobile handleClose={handleClose} isShowing={isShowing} />
     </>
   );
 }
@@ -39,7 +29,7 @@ function NavDropdownWithState({ title, children }) {
 
   return (
     <NavDropdown
-      onToggle={(show) => setIsShowing(show)}
+      onToggle={(isShowing) => setIsShowing(isShowing)}
       title={<DropdownTab title={title} isDropShowing={isShowing} />}
       id="basic-nav-dropdown"
     >
@@ -147,5 +137,34 @@ function NavBody() {
         Contact Us
       </NavLink>
     </>
+  );
+}
+
+NavbarForMobile.propTypes = {
+  isShowing: PropTypes.bool,
+  handleClose: PropTypes.func,
+};
+function NavbarForMobile({ isShowing, handleClose }) {
+  const location = useLocation();
+  const prevLocation = useRef(location);
+
+  useEffect(() => {
+    if (isShowing && prevLocation.current !== location) {
+      handleClose();
+    }
+    prevLocation.current = location;
+  }, [location, isShowing, handleClose]);
+
+  return (
+    <Offcanvas isShowing={isShowing} onHide={handleClose} className="d-lg-none">
+      <Offcanvas.Header closeButton>
+        <Offcanvas.Title>
+          <Logo />
+        </Offcanvas.Title>
+      </Offcanvas.Header>
+      <Offcanvas.Body className="nav__small-screen d-flex justify-content-center align-items-center flex-column">
+        <NavBody />
+      </Offcanvas.Body>
+    </Offcanvas>
   );
 }

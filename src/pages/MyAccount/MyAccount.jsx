@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { AccountInfo, AddressInfo, OrderInfo, Wishlist } from "../MyAccount";
+import { RedFemale } from "../../assets";
+import { MdPhotoCamera } from "react-icons/md";
 
 const MyAccount = () => {
   const [activeSection, setActiveSection] = useState("AccountInfo");
@@ -16,6 +18,10 @@ const MyAccount = () => {
     <div>
       <h1 className="text-center">My Account</h1>
       <div className="sidebar-container">
+        <div style={{position: "relative", display: "inline-block"}}>
+          <img src={RedFemale} alt="" />
+          <MdPhotoCamera style={{ width: "50px", height: "50px" }} />
+        </div>
         <div className="sidebar" role="tablist">
           <ul>
             <li

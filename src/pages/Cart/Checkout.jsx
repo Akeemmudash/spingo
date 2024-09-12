@@ -11,26 +11,26 @@ const Checkout = () => {
               <h3 className="section-title">Contact Information</h3>
               <form>
                 <div className="d-flex">
-                <div className="form-group">
-                  <label htmlFor="firstName">First Name</label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    placeholder="First name"
-                    required
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="lastName">Last Name</label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    placeholder="Last name"
-                    required
-                  />
-                </div>
+                  <div className="form-group">
+                    <label htmlFor="firstName">First Name</label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      placeholder="First name"
+                      required
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="lastName">Last Name</label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      placeholder="Last name"
+                      required
+                    />
+                  </div>
                 </div>
                 <div className="form-group">
                   <label htmlFor="phoneNumber">Phone Number</label>
@@ -91,28 +91,28 @@ const Checkout = () => {
                   />
                 </div>
                 <div className="d-flex">
-                <div className="form-group justify-content-between">
-                  <label htmlFor="state">State</label>
-                  <input
-                    type="text"
-                    id="state"
-                    name="state"
-                    placeholder="State"
-                    required
-                  />
+                  <div className="form-group justify-content-between">
+                    <label htmlFor="state">State</label>
+                    <input
+                      type="text"
+                      id="state"
+                      name="state"
+                      placeholder="State"
+                      required
+                    />
+                  </div>
+                  <div className="form-group justify-content-between">
+                    <label htmlFor="zipCode">Zip Code</label>
+                    <input
+                      type="text"
+                      id="zipCode"
+                      name="zipCode"
+                      placeholder="Zip Code"
+                      required
+                    />
+                  </div>
                 </div>
-                <div className="form-group justify-content-between">
-                  <label htmlFor="zipCode">Zip Code</label>
-                  <input
-                    type="text"
-                    id="zipCode"
-                    name="zipCode"
-                    placeholder="Zip Code"
-                    required
-                  />
-                </div>
-                </div>
-                <div className="form-group">
+                <div className="form-group d-flex align-items-center">
                   <input
                     type="checkbox"
                     id="differentBilling"
@@ -160,26 +160,26 @@ const Checkout = () => {
                   />
                 </div>
                 <div className="d-flex">
-                <div className="form-group justify-content-between">
-                  <label htmlFor="expiryDate">Expiration Date</label>
-                  <input
-                    type="text"
-                    id="expiryDate"
-                    name="expiryDate"
-                    placeholder="MM/YY"
-                    required
-                  />
-                </div>
-                <div className="form-group justify-content-between">
-                  <label htmlFor="cvc">CVC</label>
-                  <input
-                    type="number"
-                    id="cvc"
-                    name="cvc"
-                    placeholder="CVC code"
-                    required
-                  />
-                </div>
+                  <div className="form-group justify-content-between">
+                    <label htmlFor="expiryDate">Expiration Date</label>
+                    <input
+                      type="text"
+                      id="expiryDate"
+                      name="expiryDate"
+                      placeholder="MM/YY"
+                      required
+                    />
+                  </div>
+                  <div className="form-group justify-content-between">
+                    <label htmlFor="cvc">CVC</label>
+                    <input
+                      type="number"
+                      id="cvc"
+                      name="cvc"
+                      placeholder="CVC code"
+                      required
+                    />
+                  </div>
                 </div>
               </form>
             </div>
@@ -189,7 +189,7 @@ const Checkout = () => {
           </button>
         </div>
       </div>
-        <OrderSummary />
+      <OrderSummary />
     </div>
   );
 };

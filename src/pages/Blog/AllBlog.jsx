@@ -69,10 +69,6 @@ const AllBlog = () => {
   const popover = (blog) => (
     <Popover>
       <Popover.Header as="h3">{blog.header}</Popover.Header>
-      <Popover.Body>
-        <strong>Date: </strong>
-        {blog.date}
-      </Popover.Body>
     </Popover>
   );
 

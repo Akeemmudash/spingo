@@ -12,8 +12,8 @@ import { SignIn, SignUp } from "./pages/SignUp";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import Shop from "./pages/shop";
-import Products from "./pages/shop/Products";
+import Product from "./pages/Product";
+import Shop from "./pages/Shop/Shop";
 import ContactUs from "./pages/ContactUs/index";
 import Blog from "./pages/Blog/Blog";
 import BlogPost from "./pages/Blog/BlogPost";
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
       },
       {
         path: "shop/:id/product",
-        element: <Products />,
+        element: <Product />,
       },
       {
         path: "blog",

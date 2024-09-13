@@ -1,16 +1,11 @@
-import NewsLetter from "../../components/NewsLetter";
-import PageHeader from "./PageHeader";
-import Products from "./Products";
-import MLProducts from "./MLProducts";
-import "./shop.css";
+import DHeader from "./DHeader";
+import Shop from "./Shop";
+import AllProducts from "./AllProducts";
+import FeaturedProduct from "./FeaturedProduct";
 
-export default function Shop() {
-  return (
-    <>
-      <PageHeader />
-      <Products />
-      <MLProducts />
-      <NewsLetter />
-    </>
-  );
+export {
+    DHeader,
+    Shop, 
+    AllProducts,
+    FeaturedProduct
 }

@@ -4,7 +4,7 @@ import { FaChevronDown } from "react-icons/fa";
 import { RiLayoutGridFill } from "react-icons/ri";
 import { TfiLayoutGrid3Alt, TfiLayoutColumn2Alt } from "react-icons/tfi";
 import { TbLayoutListFilled } from "react-icons/tb";
-import {FeaturedProduct, AllProducts} from "../Shop";
+import { FeaturedProduct, AllProducts } from "../Shop";
 
 const DHeader = () => {
   const [activeSection, setActiveSection] = useState("AllProducts");
@@ -127,7 +127,7 @@ const DHeader = () => {
 
       {/* Apply layout changes to content */}
       <div className={`sectionContent ${layoutMode}`}>
-        {activeSection === "AllProducts" && <AllProducts />}
+        {activeSection === "AllProducts" && <AllProducts layoutMode={layoutMode}  />}
         {activeSection === "FeaturedProduct" && <FeaturedProduct />}
       </div>
     </div>

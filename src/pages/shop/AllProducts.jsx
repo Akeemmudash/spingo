@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import sampleImage from "../../assets/productImageSamples/spark-plugs.png";
 import ProductCard from "../../components/ProductCard";
 
-const AllProducts = () => {
+const AllProducts = ({ layoutMode }) => {
   const initialProducts = [
     {
       productName: "ClutchForce - Precision Clutch Kit",
@@ -88,6 +88,7 @@ const AllProducts = () => {
 
   return (
     <>
+    <div className={`sectionContent ${layoutMode}`}>
       <div className="product-grid">
         {products.map((product, index) => (
           <ProductCard
@@ -99,6 +100,7 @@ const AllProducts = () => {
           />
         ))}
       </div>
+    </div>
       <div className="show-more-container">
         <button className="btn showMore" onClick={loadMoreProducts}>
           Show More

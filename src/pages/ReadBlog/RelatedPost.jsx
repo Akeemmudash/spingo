@@ -35,9 +35,13 @@ const RelatedPost = () => {
       try {
         const data = await fetchRelatedPosts();
         setPosts(data);
-        setLoading(false);
       } catch (err) {
-        setError("Failed to load related posts.");
+        if (err) {
+          setError(err.message);
+        } else {
+          setError("Failed to load related posts.");
+        }
+      } finally {
         setLoading(false);
       }
     };

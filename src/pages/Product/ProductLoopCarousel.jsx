@@ -46,7 +46,7 @@ export default function ProductLoopCarousel({ item }) {
             <FaArrowRight />
           </button>
         </div>
-        <div className="scroll-container row">
+        <div className="scroll-container row ">
           {item.colors.map((color, index) => (
             <div className="col" key={index}>
               <motion.div

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const AccountInfo = () => {
   return (
@@ -8,11 +8,23 @@ const AccountInfo = () => {
         <form action="">
           <div className="form-group">
             <label htmlFor="first-name">FIRST NAME:</label>
-            <input type="text" id="first-name" name="firstName" defaultValue="John" placeholder="First name" required />
+            <input
+              type="text"
+              id="first-name"
+              name="firstName"
+              placeholder="First name"
+              required
+            />
           </div>
           <div className="form-group">
             <label htmlFor="last-name">LAST NAME:</label>
-            <input type="text" id="last-name" name="lastName" placeholder="Last name" required />
+            <input
+              type="text"
+              id="last-name"
+              name="lastName"
+              placeholder="Last name"
+              required
+            />
           </div>
           <div className="form-group">
             <label htmlFor="display-name">DISPLAY NAME:</label>
@@ -24,7 +36,8 @@ const AccountInfo = () => {
               required
             />
             <span className="form-help-text">
-              This is how your name will be displayed in the account section and in reviews.
+              This is how your name will be displayed in the account section and
+              in reviews.
             </span>
           </div>
           <div className="form-group">

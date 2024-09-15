@@ -215,7 +215,7 @@ p {
   margin-bottom: 0;
 }
 .row {
-  margin-inline: auto;
+  /* margin-inline: auto; */
 }
 .section__body {
   padding-top: 48px;
@@ -237,15 +237,12 @@ a {
   opacity: 0.85;
 }
 @media screen and (max-width: 991px) {
-  .row > * {
-    --bs-gutter-y: 1rem;
-  }
   body {
     --site-header-height: 76px;
   }
 }
 @media screen and (max-width: 575px) {
-  .row > * {
+  .row {
     --bs-gutter-x: 0.5rem;
     --bs-gutter-y: 0.5rem;
   }

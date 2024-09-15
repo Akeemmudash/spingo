@@ -3,12 +3,11 @@ import { ControlArms, FuelPumps, OilFilters } from "../../assets";
 
 const NotificationImage = ({ src, alt, notificationCount }) => (
   <div style={{ position: "relative", display: "inline-block" }}>
-    {/* Notification badge above the image */}
     {notificationCount > 0 && (
       <span
         style={{
           position: "absolute",
-          top: "-15px", // Moves the badge above the image
+          top: "-15px", 
           right: "0px",
           backgroundColor: "black",
           color: "white",

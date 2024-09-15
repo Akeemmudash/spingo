@@ -1,14 +1,14 @@
 import Container from "react-bootstrap/Container";
 
-import "./header.css";
-import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import useStickyHeader from "../../hooks/useStickyHeader";
 import FlyoutCart from "./FlyoutCart";
+import "./header.css";
 import Navbar from "./Navbar";
 import Profile from "./Profile";
 import PromoBar from "./PromoBar";
 import Search from "./Search";
-import useStickyHeader from "../../hooks/useStickyHeader";
 
 const variants = {
   visible: {

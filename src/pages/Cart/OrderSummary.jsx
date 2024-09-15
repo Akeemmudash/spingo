@@ -4,28 +4,60 @@ import { motion } from "framer-motion";
 
 const OrderSummary = () => {
   const [items, setItems] = useState([
-    { id: 1, name: "Alternator Unit", price: 38.00, quantity: 1, quality: "excellence" },
-    { id: 2, name: "Fuel Pump", price: 38.00, quantity: 1, quality: "excellence" },
-    { id: 3, name: "Oil Filter", price: 38.00, quantity: 1, quality: "excellence" }
+    {
+      id: 1,
+      name: "Alternator Unit",
+      price: 38.0,
+      quantity: 1,
+      quality: "excellence",
+    },
+    {
+      id: 2,
+      name: "Fuel Pump",
+      price: 38.0,
+      quantity: 1,
+      quality: "excellence",
+    },
+    {
+      id: 3,
+      name: "Oil Filter",
+      price: 38.0,
+      quantity: 1,
+      quality: "excellence",
+    },
   ]);
 
   // Function to increment the quantity
   const incrementCounter = (id) => {
-    setItems(items.map(item => item.id === id ? { ...item, quantity: item.quantity + 1 } : item));
+    setItems(
+      items.map((item) =>
+        item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+      )
+    );
   };
 
   // Function to decrement the quantity
   const decrementCounter = (id) => {
-    setItems(items.map(item => item.id === id && item.quantity > 1 ? { ...item, quantity: item.quantity - 1 } : item));
+    setItems(
+      items.map((item) =>
+        item.id === id && item.quantity > 1
+          ? { ...item, quantity: item.quantity - 1 }
+          : item
+      )
+    );
   };
 
   return (
     <div>
       <h3>Order Summary</h3>
       {items.map((item) => (
-        <div key={item.id}>
-          <div style={{ height: "50px", width: "50px" }}>
-            <img src={FuelPumps} alt={item.name} />
+        <div key={item.id} className="d-flex justify-content-between gap-5">
+          <div>
+            <img
+              src={FuelPumps}
+              alt={item.name}
+              style={{ height: "100px", width: "100px" }}
+            />
           </div>
           <div>
             <p>{item.name}</p>
@@ -50,10 +82,21 @@ const OrderSummary = () => {
               </motion.button>
             </div>
           </div>
-          <p>${item.price.toFixed(2)}</p>
+          <div>
+            <p>${item.price.toFixed(2)}</p>
+            <p
+              onClick={() => removeItem(item.id)}
+              style={{ cursor: "pointer" }}
+            >
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABJUlEQVR4nO3YT0sCQRyH8YeuUu0KG/RHUG8efAceetFBJ6noEKUI6iG1wHolxcIYg6wi67Qzs3w/IHga92F09zeCiIiIiMg/6QEPwKXDNRvAHXBLhYbADzAHLhysdwo8W2ueUJEMmJoPfj9yZ/KdeDRrfQNdKpYCY3MBC+DKQUQHT46JsSO+fEYUxSwPjMkjnkKKsGNGVsw1u50BLyFGFMWsdsQEH7GR7Ik534poE7hkK+YmxoiNJjAxF/4BvJr3n0CLyCTAmwnIX+uYdqJ2Ic06fLWSgjtXdD/2dM/tN5pnSHrA0z3Y0aTMvBVsTFpiAg5mfHc9xnuNyaxT4qLkKbFhzv7eTocZMHN41PUWM6zLnw99E+Miwo65BwYO1xQRERER4c8v6Th7MMbV15kAAAAASUVORK5CYII="
+                alt="Remove"
+              />
+            </p>
+          </div>
         </div>
       ))}
-      
+
       <div>
         <input type="text" placeholder="Input promo code" />
         <p>Apply</p>
@@ -69,7 +112,10 @@ const OrderSummary = () => {
       <div>
         <p>Subtotal</p>
         <span>
-          ${items.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)}
+          $
+          {items
+            .reduce((acc, item) => acc + item.price * item.quantity, 0)
+            .toFixed(2)}
         </span>
       </div>
       <div>

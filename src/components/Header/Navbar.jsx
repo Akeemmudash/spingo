@@ -156,7 +156,7 @@ function NavbarForMobile({ isShowing, handleClose }) {
   }, [location, isShowing, handleClose]);
 
   return (
-    <Offcanvas isShowing={isShowing} onHide={handleClose} className="d-lg-none">
+    <Offcanvas show={isShowing} onHide={handleClose} className="d-lg-none">
       <Offcanvas.Header closeButton>
         <Offcanvas.Title>
           <Logo />

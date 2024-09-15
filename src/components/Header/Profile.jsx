@@ -1,5 +1,6 @@
 import React from "react";
 import { Dropdown } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const ProfileToggler = React.forwardRef((props, ref) => (
   <button className="btn-reset" ref={ref} {...props}>
@@ -30,9 +31,11 @@ export default function Profile() {
       <Dropdown.Toggle as={ProfileToggler} className="btn-reset" />
 
       <Dropdown.Menu align="end">
-        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+        <Dropdown.Item as={Link} to="/sign-in">
+          Sign In
+        </Dropdown.Item>
+        <Dropdown.Item to="/sign-up">Create Account</Dropdown.Item>
+        <Dropdown.Item href="My Cart">View Cart</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   );

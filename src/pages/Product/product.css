@@ -119,16 +119,16 @@
 .add-to-cart-btn:active {
   transform: scale(0.99);
 }
-.btn {
+/* .btn {
   padding: 10px 30px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
-}
+} */
 
-.btn:hover {
+/* .btn:hover {
   background-color: #0088cc;
-}
+} */
 
 .add-to-cart-btn {
   background-color: #001f3f;

@@ -108,7 +108,7 @@ const Review = () => {
                   <AnimatePresence>
                     {review.replying && (
                       <motion.form
-                        className="reply-input d-flex gap-2"
+                        className="reply-input d-flex gap-2 mt-2 flex-column flex-md-row"
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}

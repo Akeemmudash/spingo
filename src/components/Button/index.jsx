@@ -1,66 +1,64 @@
 import PropTypes from "prop-types";
-import "./button.css";
 import { ArrowRight } from "../../assets/icons";
 import { Link } from "react-router-dom";
+import "./button.css";
+
 Button.propTypes = {
-  props: PropTypes.object,
   children: PropTypes.node,
   className: PropTypes.string,
   fullWidth: PropTypes.bool,
-  to: PropTypes.string,
-  onClick: PropTypes.func,
-  variant: PropTypes.string,
-  type: PropTypes.oneOf(["outline", "filled", "link"]),
+  buttonType: PropTypes.oneOf[("link", "button")],
+  variant: PropTypes.oneOf(["outline", "filled", "underline", "plain"]),
+  hasUnderlineAndArrow: PropTypes.bool,
 };
 
 export default function Button({
   children,
-  type,
+  buttonType = "button",
   fullWidth,
   className,
-  onClick,
   variant,
-  to,
-  props,
+  hasUnderlineAndArrow,
+  ...props
 }) {
-  let buttonType = "";
-  switch (type) {
+  let buttonVariant = "";
+  switch (variant) {
     case "outline":
-      buttonType = "outline-btn";
+      buttonVariant = "outline-btn";
       break;
-    case "link":
-      buttonType = "link-btn";
+    case "underline":
+      buttonVariant = "underline-arrow-btn";
+      break;
+    case "plain":
+      buttonVariant = "plain-btn";
       break;
     default:
-      buttonType = "normal-btn";
+      buttonVariant = "normal-btn";
       break;
   }
-  if (buttonType === "link-btn") {
+  if (buttonType === "button") {
+    return (
+      <button
+        {...props}
+        className={`${buttonVariant} rounded-3 fw-medium ${
+          className ? className : ""
+        }${fullWidth === true ? " w-100" : ""}`}
+      >
+        {children}
+      </button>
+    );
+  } else {
     return (
       <Link
-        to={to}
-        onClick={onClick}
         {...props}
-        className={`link-btn  ${className} ${
+        className={`${buttonVariant} ${className} ${
           fullWidth === true ? "w-100" : ""
         }`}
       >
         {children}
         &nbsp;
-        <ArrowRight />
+        {hasUnderlineAndArrow && <ArrowRight />}
       </Link>
     );
   }
-
-  return (
-    <button
-      {...props}
-      onClick={onClick}
-      className={`${buttonType} rounded-3 fw-medium ${variant} ${className}  ${
-        fullWidth === true ? "w-100" : ""
-      }`}
-    >
-      {children}
-    </button>
-  );
 }

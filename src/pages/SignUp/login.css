@@ -44,14 +44,14 @@
   font-weight: 800;
 }
 
-form {
+.auth__form {
   display: flex;
   flex-direction: column;
   width: 100%;
   margin: 0 auto;
   margin-bottom: 10px;
 }
-input {
+.auth__input {
   border: none;
   border-bottom: 1px solid var(--primary-300);
   padding: 10px;
@@ -86,11 +86,11 @@ input {
     display: block;
     flex-direction: column;
   }
-  .displayImage{
+  .displayImage {
     height: 400px;
     width: -webkit-fill-available;
   }
-  .details{
+  .details {
     padding: 30px;
   }
   .bigScreen {
@@ -102,24 +102,24 @@ input {
     left: 35%;
     width: 150px;
   }
-  .card{
+  .card {
     width: 100%;
   }
 
-  .input{
+  .input {
     margin-bottom: 10px;
   }
-  .dtick p{
+  .dtick p {
     font-size: 12px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-    .Dlogo{
-        left: 40%;
-    }
+  .Dlogo {
+    left: 40%;
+  }
 }
 @media (max-width: 420px) {
-    .dtick{
-        gap: 3px;
-    }
+  .dtick {
+    gap: 3px;
+  }
 }

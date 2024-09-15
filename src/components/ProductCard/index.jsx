@@ -4,12 +4,14 @@ import StarRating from "../StarRating";
 import { formatToUSD } from "../../utils/formatToUSD";
 import Button from "../Button";
 import { LikeIcon } from "../../assets/icons";
+import { Link } from "react-router-dom";
 
 ProductCard.propTypes = {
   productImage: PropTypes.string,
   productName: PropTypes.string,
   productPrice: PropTypes.number,
   discount: PropTypes.number,
+  productPageLink: PropTypes.number,
 };
 
 export default function ProductCard({
@@ -17,6 +19,7 @@ export default function ProductCard({
   productName,
   productPrice,
   discount,
+  productPageLink,
 }) {
   const price = formatToUSD(productPrice);
   let oldPrice = parseFloat(
@@ -28,13 +31,13 @@ export default function ProductCard({
   return (
     <div className="product-card d-flex flex-column rounded-3 overflow-hidden justify-content-between">
       <div className="card__head rounded-3 position-relative overflow-hidden">
-        <div className="card__img h-full">
+        <Link to={productPageLink} className="card__img h-full">
           <img
             src={productImage}
             alt={productName}
             className="w-100 h-100 d-block object-fit-cover rounded-3"
           />
-        </div>
+        </Link>
         <div className="product__tags position-absolute d-flex flex-column gap-2">
           <span className="hot-tag rounded-2 text-uppercase  rounded-1 fs-7 fw-semibold  bg-white text-center">
             hot
@@ -58,7 +61,12 @@ export default function ProductCard({
         <div className="product__rating" title="5 out of 5">
           <StarRating rating={5} />
         </div>
-        <h3 className="card__title fw-bold fs-6 mt-2">{productName}</h3>
+        <Link
+          to={productPageLink}
+          className="card__title text-decoration-none fw-bold fs-6 mt-2"
+        >
+          {productName}
+        </Link>
         <p className="product__price mt-auto fs-7 mb-0">
           <span className="fw-bold">{price}</span>
           <span className="text-decoration-line-through ms-2">{oldPrice}</span>

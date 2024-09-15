@@ -44,6 +44,7 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   line-clamp: 2;
+  color: var(--base-black);
   overflow: hidden;
 }
 @media (max-width: 991px) {

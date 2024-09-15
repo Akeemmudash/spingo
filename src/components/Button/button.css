@@ -15,20 +15,33 @@
   border: 1px solid currentColor;
   padding: 0.64em 0.8em;
 }
-.link-btn {
-  border-bottom: 1px solid currentColor;
+.underline-arrow-btn {
   padding-bottom: 0.1em;
+  border-bottom: 1px solid currentColor;
 }
+
 .normal-btn:hover {
   opacity: 0.92;
 }
 .outline-btn:hover {
 }
-.link-btn .arrow-right {
+.underline-arrow-btn .arrow-right {
   transition: transform 0.1s ease-out;
 }
-.link-btn:hover .arrow-right {
+.underline-arrow-btn:hover .arrow-right {
   transform: translateX(3px);
+}
+.plain-btn {
+  background-color: unset;
+  border: unset;
+  padding: 0.7em 3em;
+  transform: opacity ease-in-out 0.2s, transform ease-in-out 0.2s;
+}
+.plain-btn:hover {
+  opacity: 0.8;
+}
+.plain-btn:active {
+  transform: scale(0.97);
 }
 
 .close-btn:hover {

@@ -71,7 +71,7 @@ export default function ProductDetails({ item }) {
           <Button
             className="wishlist-btn d-flex  justify-content-center gap-3 text-base-primary flex-grow-1"
             onClick={handleClick}
-            type="outline"
+            variant="outline"
           >
             <span className="like-icon position-relative w-6 h-6 d-block">
               {!isLiked ? (

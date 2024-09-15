@@ -17,7 +17,13 @@ export default function PromoBar({ ShowPromoBar, setShowPromoBar }) {
           />
           <span className="ms-3">30% Off Storewide — Limited Time! </span>
         </Link>
-        <Button type="link" className="ms-3 d-none d-sm-block" to="/shop">
+        <Button
+          buttonType="link"
+          className="ms-3 d-none d-sm-block"
+          hasUnderlineAndArrow
+          variant="underline"
+          to="/shop"
+        >
           Shop Now
         </Button>
       </p>

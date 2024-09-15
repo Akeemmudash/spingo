@@ -51,12 +51,18 @@ export default function FlyoutCart() {
                 <strong className="mb-0 subtotal__price fs-5">₦ 23,000</strong>
               </div>
 
-              <Button fullWidth className="mb-2">
+              <Button
+                fullWidth
+                buttonType="link"
+                className="mb-2 d-block text-center rounded-2"
+              >
                 Checkout
               </Button>
               <Button
-                type="outline"
-                className="text-decoration-underline text-base-black link-offset-2"
+                variant="plain"
+                buttonType="link"
+                to="/cart"
+                className="text-decoration-underline text-base-black link-offset-2 d-block text-center rounded-3"
                 fullWidth
               >
                 View Cart

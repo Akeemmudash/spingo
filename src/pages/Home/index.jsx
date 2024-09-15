@@ -5,9 +5,8 @@ import ShopCollectionSection from "./ShopCollectionSection";
 import BannerSection from "./BannerSection";
 import Values from "../../components/Values";
 import NewsLetter from "../../components/NewsLetter";
+import ArticlesSection from "./ArticlesSection";
 import "./home.css";
-import LatestArticlesSection from "./LatestArticlesSection";
-
 
 export default function Home() {
   return (
@@ -18,8 +17,8 @@ export default function Home() {
       <Values />
       <BannerSection />
       <ShopCollectionSection />
+      <ArticlesSection />
       <NewsLetter />
-      <LatestArticlesSection />
     </>
   );
 }

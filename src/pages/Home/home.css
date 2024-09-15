@@ -206,8 +206,7 @@ h2 {
   font-size: 40px;
   color: #f3f5f7;
 }
-.banner-content p,
-s {
+.banner-content p {
   color: #fff;
   font-weight: 400;
 }
@@ -217,15 +216,10 @@ s {
 }
 
 .shopping-btn {
-  /* padding: 10px 20px;
-  background-color: #00aaff;
-  color: #fff;
-  border: none;
-  cursor: pointer; */
+  background-color: var(--secondary-base);
 }
 
 .shopping-btn:hover {
-  background-color: grey;
   color: #fff;
 }
 @media (max-width: 991px) {
@@ -258,16 +252,6 @@ s {
   }
 }
 /* Latest Article */
-
-.article__card {
-  aspect-ratio: 43/50;
-}
-.article__card .card__head {
-  height: 78%;
-}
-.article__title {
-  font-size: clamp(16px, 1vw, 20px);
-}
 
 @media (max-width: 991px) {
   .articles__grid > *:last-child {

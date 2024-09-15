@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { BannerImg } from "../../assets";
 import "./home.css";
@@ -37,14 +36,17 @@ const BannerSection = () => {
         className="banner-content w-100 h-100 ps-lg-5 container "
         variants={itemVariants}
       >
-        <div className="px-4 d-flex justify-content-center align-items-lg-start align-items-center flex-column section__body">
+        <div className="px-lg-4 d-flex justify-content-center align-items-lg-start align-items-center flex-column section__body">
           <p className="banner-header fw-semibold">LIMITED EDITION</p>
           <h2>Hurry Up! 30% OFF</h2>
           <p>Find clubs that are right for your game</p>
           <div className="mt-4">
             <OfferCountDown dateTimeString={dateTimeString} />
           </div>
-          <Button variant={"secondary"} className="shopping-btn mt-4 mt-md-5">
+          <Button
+            variant="normal"
+            className="shopping-btn mt-4 mt-md-5 secondary"
+          >
             Shop Now
           </Button>
         </div>

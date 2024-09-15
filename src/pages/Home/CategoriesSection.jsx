@@ -8,6 +8,7 @@ import {
   ClutchKibs,
 } from "../../assets";
 import { OverlayTrigger, Popover } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const CategoriesSection = () => {
   const categories = [
@@ -69,27 +70,34 @@ const CategoriesSection = () => {
     >
       <h2>Shop by Categories</h2>
       <div className="categories row section__body">
-        {categories.map((category, index) => (
-          <div className="col-6 col-md-4" key={index}>
-            <OverlayTrigger
-              trigger={["hover", "focus"]}
-              placement="top"
-              overlay={
-                <Popover id={`popover-${index}`}>
-                  <Popover.Header as="h3">
-                    {category.ProductName}
-                  </Popover.Header>
-                  <Popover.Body>{category.ProductDescription}</Popover.Body>
-                </Popover>
-              }
-            >
-              <motion.div className="category-item" variants={itemVariants}>
-                <img src={category.ProductImg} alt={category.ProductName} />
-                <p>{category.ProductName}</p>
-              </motion.div>
-            </OverlayTrigger>
-          </div>
-        ))}
+        {categories.map((category, index) => {
+          const link = `/shop/${category.ProductName.toLowerCase().replace(
+            " ",
+            "-"
+          )}`;
+
+          return (
+            <Link to={link} className="col-6 col-md-4" key={index}>
+              <OverlayTrigger
+                trigger={["hover", "focus"]}
+                placement="top"
+                overlay={
+                  <Popover id={`popover-${index}`}>
+                    <Popover.Header as="h3">
+                      {category.ProductName}
+                    </Popover.Header>
+                    <Popover.Body>{category.ProductDescription}</Popover.Body>
+                  </Popover>
+                }
+              >
+                <motion.div className="category-item" variants={itemVariants}>
+                  <img src={category.ProductImg} alt={category.ProductName} />
+                  <p className="mb-4">{category.ProductName}</p>
+                </motion.div>
+              </OverlayTrigger>
+            </Link>
+          );
+        })}
       </div>
     </motion.section>
   );

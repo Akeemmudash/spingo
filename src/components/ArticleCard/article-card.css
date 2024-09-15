@@ -1,0 +1,35 @@
+.article__card.vertical {
+  aspect-ratio: 43/50;
+  flex-direction: column;
+}
+.article__card.vertical .card__head {
+  height: 78%;
+}
+.article__card.vertical .card__body {
+  margin-top: 20px;
+}
+.article__title {
+  font-size: clamp(16px, 1vw, 20px);
+}
+/* .article__card {
+    aspect-ratio: 43/50;
+  } */
+.article__card.horizontal {
+  height: 220px;
+  flex-direction: row;
+  aspect-ratio: unset;
+  width: 100%;
+}
+
+.article__card.horizontal .card__head {
+  height: 100%;
+  width: 300px;
+}
+
+.article__card.horizontal .card__body {
+  flex-grow: 1;
+  padding-left: 30px;
+}
+.article__card.article__card.horizontal .article__title {
+  font-size: 30px;
+}

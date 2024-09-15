@@ -1,0 +1,150 @@
+.cartpage h1 {
+  font-size: 54px;
+  font-weight: 400;
+  font-family: coolvetica;
+  line-height: 58px;
+  margin-top: 20px;
+}
+.process {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.process-frame {
+  padding: 20px 40px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  color: grey;
+  transition: color 0.3s ease;
+}
+
+.process-frame:hover,
+.process-frame.active {
+  border-bottom: 2px solid black;
+  color: black;
+}
+
+.process-title {
+  margin-left: 10px;
+}
+.number-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+  transition: background-color 0.3s ease;
+}
+
+.process-frame:hover .number-circle,
+.process-frame.active .number-circle {
+  background-color: black;
+}
+
+.number {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h3 {
+  transition: color 0.3s ease;
+}
+@media (max-width: 768px) {
+  .process-title {
+    display: none;
+  }
+
+  .process-frame.active .number-circle {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* ShoppingCart */
+.shoppingCart {
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.product-fImg {
+  display: flex;
+  gap: 10px;
+}
+.crement-2 {
+  display: flex;
+  align-items: baseline;
+}
+
+/* Cartside */
+
+/* Checkout  */
+.checkout{
+    justify-content: space-around;
+}
+.checkout-container {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .formInfo {
+    flex: 1;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .payment-method hr {
+    margin: 1rem 0;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+@media (max-width: 998px) {
+    .checkout-container, .shoppingCart{
+        flex-direction: column;
+    }
+}
+/* Order Completion */
+.ordercompletion .container {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(204, 204, 204, 0.5);
+}

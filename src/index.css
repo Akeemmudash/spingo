@@ -61,11 +61,12 @@ will be here as css variables
   --rating-gold: #f86624;
   --base-black: #030206;
 
-  scrollbar-gutter: stable;
+  /* scrollbar-gutter: stable; */
 }
 
 /* utility classes  */
-.font-primary {
+.font-primary,
+h1 {
   font-family: "Coolvetica", sans-serif;
 }
 .font-secondary {
@@ -83,6 +84,9 @@ will be here as css variables
 }
 .text-base-primary {
   color: var(--primary-base);
+}
+.text-base-secondary {
+  color: var(--secondary-base);
 }
 .text-base-black {
   color: var(--base-black);
@@ -111,6 +115,9 @@ will be here as css variables
 }
 .bg-gray-base {
   background-color: var(--base-gray);
+}
+.bg-gray-light {
+  background-color: var(--light-gray);
 }
 .w-0\.5 {
   width: 2px;
@@ -197,12 +204,18 @@ body {
   font-family: "Open Sauce One", sans-serif;
   color: var(--base-black);
 }
+h1 {
+  font-size: clamp(40px, 5vw, 54px);
+}
 h2 {
   font-size: clamp(30px, 4vw, 40px);
   margin-bottom: 0;
 }
 p {
   margin-bottom: 0;
+}
+.row {
+  margin-inline: auto;
 }
 .section__body {
   padding-top: 48px;

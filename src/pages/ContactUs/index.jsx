@@ -1,17 +1,19 @@
-import React from "react";
-import ValuesSection from "../Home/ValuesSection";
-import FeatureSection from "./FeatureSection";
-import ContactSection from "./ContactSection";
+import Values from "../../components/Values";
 import ContactHeader from "./ContactHeader";
+import ContactSection from "./ContactSection";
+import FeatureSection from "./FeatureSection";
 import "./contactus.css";
 
 export default function ContactUs() {
   return (
-    <div className="contactus">
-        <ContactHeader />
-        <FeatureSection />
-        <ContactSection />
-        <ValuesSection />
-    </div>
+    <article className="contactus">
+      <ContactHeader />
+      <FeatureSection />
+      <ContactSection />
+
+      <div className="bg-gray-light mt-5">
+        <Values />
+      </div>
+    </article>
   );
 }

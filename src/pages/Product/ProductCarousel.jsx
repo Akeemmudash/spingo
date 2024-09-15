@@ -9,7 +9,13 @@ const ProductCarousel = () => {
         <div className="heading d-flex justify-content-between align-content-baseline">
           <h2>You Might Also Like</h2>
           <div className="">
-            <Button type="link" to="/shop">
+            <Button
+              buttonType="link"
+              to="/shop"
+              variant="underline"
+              hasUnderlineAndArrow
+              className=""
+            >
               More Products
             </Button>
           </div>

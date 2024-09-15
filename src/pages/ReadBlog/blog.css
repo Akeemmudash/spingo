@@ -1,0 +1,9 @@
+.dblog-image img {
+  max-height: 560px;
+}
+.blog__side-content img {
+  max-height: 350px;
+}
+.relatedpost {
+  /* margin-top: 190px; */
+}

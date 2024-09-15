@@ -32,24 +32,39 @@ export default function FeaturedSection() {
                 productName={"ClutchForce - Precision Clutch Kit"}
                 productImage={sampleImage}
                 productPrice={24.99}
+                productPageLink={"/shop/product/6666666666777"}
                 discount={10}
               />
+
               <ProductCard
                 productName={"ClutchForce - Precision Clutch Kit"}
                 productImage={sampleImage}
                 productPrice={24.99}
+                productPageLink={"/shop/product/6666666666777"}
                 discount={10}
               />
+
               <ProductCard
                 productName={"ClutchForce - Precision Clutch Kit"}
                 productImage={sampleImage}
                 productPrice={24.99}
+                productPageLink={"/shop/product/6666666666777"}
                 discount={10}
               />
+
               <ProductCard
                 productName={"ClutchForce - Precision Clutch Kit"}
                 productImage={sampleImage}
                 productPrice={24.99}
+                productPageLink={"/shop/product/6666666666777"}
+                discount={10}
+              />
+
+              <ProductCard
+                productName={"ClutchForce - Precision Clutch Kit"}
+                productImage={sampleImage}
+                productPrice={24.99}
+                productPageLink={"/shop/product/6666666666777"}
                 discount={10}
               />
             </div>

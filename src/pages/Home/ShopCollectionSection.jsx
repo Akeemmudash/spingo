@@ -30,7 +30,7 @@ export default function ShopCollectionSection() {
             <ShopCollectionCard collection={clutch} />
           </div>
           <div className="col-12 col-md-6">
-            <div className="row w-100 mx-0 h-100">
+            <div className="row w-100  h-100">
               <div className="col-12 p-0  mt-0">
                 <ShopCollectionCard collection={brake} />
               </div>
@@ -61,7 +61,9 @@ function ShopCollectionCard({ collection }) {
       <div className="title position-absolute bottom-0 p-3 p-lg-4 p-xl-5">
         <h3 className="text-capitalize font-primary mb-0 mb-lg-2">{title}</h3>
         <Button
-          type="link"
+          buttonType="link"
+          variant="underline"
+          hasUnderlineAndArrow
           to={`shop-collections/${path}`}
           className="collection__link"
         >

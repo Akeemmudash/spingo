@@ -1,0 +1,47 @@
+.pageheader {
+  height: clamp(330px, 40vh, 392px);
+}
+.pageheader__paragraph {
+  font-size: clamp(16px, 2vw, 24px);
+}
+.blog-listing__tab {
+  color: var(--base-black);
+  border-bottom: 2px solid transparent;
+}
+.blog-listing__tab:hover,
+.blog-listing__tab.active {
+  color: var(--base-black);
+  border-bottom: 2px solid currentColor;
+}
+
+.layout-icon {
+  border: 1px solid var(--gray-100);
+  padding: 8px 10px;
+  border-collapse: collapse;
+  cursor: pointer;
+  color: var(--base-gray);
+}
+.layout-icon.active,
+.layout-icon:hover {
+  background-color: var(--light-gray);
+  color: var(--base-black);
+}
+.horizontal-carousel {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.horizontal-carousel::-webkit-scrollbar {
+  display: none;
+}
+.show-more-btn {
+  transition: transform 0.2s ease;
+}
+.show-more-btn:hover {
+  background-color: var(--base-black);
+  color: #fff;
+}
+.show-more-btn:active {
+  transform: scale(0.98);
+}

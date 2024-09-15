@@ -52,11 +52,27 @@ const SignModel = ({
               <h1>{Sign}</h1>
               <p>{Account}</p>
             </div>
-            <form>
-              {YourName && <input type="text" placeholder={YourName} />}
-              {UserName && <input type="text" placeholder={UserName} />}
+            <form className="auth__form">
+              {YourName && (
+                <input
+                  type="text"
+                  className="auth__input"
+                  placeholder={YourName}
+                />
+              )}
+              {UserName && (
+                <input
+                  type="text"
+                  className="auth__input"
+                  placeholder={UserName}
+                />
+              )}
               {EmailAddress && (
-                <input type="email" placeholder={EmailAddress} />
+                <input
+                  type="email"
+                  className="auth__input"
+                  placeholder={EmailAddress}
+                />
               )}
               <PasswordToggle />
             </form>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./notfound.css";
 
 const TicTacToe = () => {
@@ -29,8 +30,11 @@ const TicTacToe = () => {
   };
 
   const checkGameResult = (updatedGameState) => {
-    const isWin = winningConditions.some(([a, b, c]) =>
-      updatedGameState[a] && updatedGameState[a] === updatedGameState[b] && updatedGameState[a] === updatedGameState[c]
+    const isWin = winningConditions.some(
+      ([a, b, c]) =>
+        updatedGameState[a] &&
+        updatedGameState[a] === updatedGameState[b] &&
+        updatedGameState[a] === updatedGameState[c]
     );
 
     if (isWin) {
@@ -51,7 +55,9 @@ const TicTacToe = () => {
 
   const renderStatus = () => {
     if (!gameActive && winner) {
-      return winner === "draw" ? `Game ended in a draw!` : `Player ${winner} has won!`;
+      return winner === "draw"
+        ? `Game ended in a draw!`
+        : `Player ${winner} has won!`;
     }
     return `It's ${currentPlayer}'s turn`;
   };
@@ -60,8 +66,12 @@ const TicTacToe = () => {
     <section className="notfound">
       <h1 className="notfound--title">404 - Page Not Found</h1>
       <p className="notfound--text">Oops! Looks like you lost your way...</p>
-      <h3 className="game--title">But you can play Tic-Tac-Toe while you're here!</h3>
-      {!gameActive && winner && <h1 className="game--winner">{renderStatus()}</h1>}
+      <h3 className="game--title">
+        But you can play Tic-Tac-Toe while you're here!
+      </h3>
+      {!gameActive && winner && (
+        <h1 className="game--winner">{renderStatus()}</h1>
+      )}
       <div className="game--container">
         {gameState.map((cell, index) => (
           <div
@@ -80,7 +90,9 @@ const TicTacToe = () => {
         Restart Game
       </button>
       <br />
-      <button className="homepage--btn" href="#">Go to Homepage</button>
+      <button className="homepage--btn">
+        <Link to="/">Go to Homepage</Link>
+      </button>
     </section>
   );
 };

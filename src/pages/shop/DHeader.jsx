@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Dropdown } from "react-bootstrap";
 import { FaChevronDown } from "react-icons/fa";
 import { RiLayoutGridFill } from "react-icons/ri";
 import { TfiLayoutGrid3Alt, TfiLayoutColumn2Alt } from "react-icons/tfi";
 import { TbLayoutListFilled } from "react-icons/tb";
-import { FeaturedProduct, AllProducts } from "./Shop";
 
 const DHeader = () => {
   const [activeSection, setActiveSection] = useState("AllProducts");
@@ -125,15 +124,13 @@ const DHeader = () => {
         </div>
       </div>
 
-      {/* Apply layout changes to content */}
+      {/* Apply layout changes to content
       <div className={`sectionContent ${layoutMode}`}>
         {activeSection === "AllProducts" && (
-          <AllProducts layoutMode={layoutMode} />
         )}
-        {activeSection === "FeaturedProduct" && <FeaturedProduct />}
       </div>
+    </div> */}
     </div>
   );
 };
-
 export default DHeader;

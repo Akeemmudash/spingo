@@ -5,3 +5,6 @@ export function formatToUSD(number) {
   });
   return USDollar.format(number);
 }
+
+export const formatTextToSlug = (category) =>
+  category.toLowerCase().trim().replace(/\s+/g, "-");

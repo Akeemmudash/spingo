@@ -1,0 +1,6 @@
+.pageheader {
+  height: clamp(300px, 50vh, 392px);
+}
+.pageheader__paragraph {
+  font-size: clamp(16px, 2vw, 24px);
+}

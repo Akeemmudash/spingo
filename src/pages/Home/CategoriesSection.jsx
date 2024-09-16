@@ -9,6 +9,7 @@ import {
 } from "../../assets";
 import { OverlayTrigger, Popover } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { containerVariants, itemVariants } from "../../constants";
 
 const CategoriesSection = () => {
   const categories = [
@@ -46,27 +47,13 @@ const CategoriesSection = () => {
     },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
-
   return (
     <motion.section
       className="categories-section container"
       variants={containerVariants}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
+      viewport={{ amount: 0.25, once: true }}
     >
       <h2>Shop by Categories</h2>
       <div className="categories row section__body">

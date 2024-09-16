@@ -1,12 +1,10 @@
 import { useState } from "react";
 import { Dropdown } from "react-bootstrap";
 import { FaChevronDown } from "react-icons/fa";
-import { RiLayoutGridFill } from "react-icons/ri";
-import { TfiLayoutGrid3Alt, TfiLayoutColumn2Alt } from "react-icons/tfi";
-import { TbLayoutListFilled } from "react-icons/tb";
-import ArticleCard from "../../components/ArticleCard";
 import { NavLink } from "react-router-dom";
+import ArticleCard from "../../components/ArticleCard";
 import Button from "../../components/Button";
+import LayoutControl from "../../components/LayoutControl";
 
 const Content = () => {
   const [selectedItem, setSelectedItem] = useState("Sort by");
@@ -21,15 +19,20 @@ const Content = () => {
   };
   let blogCardLayoutType = "vertical";
   let layoutClasses = "";
-  if (layoutMode === "grid3") {
-    layoutClasses = "col-12 col-sm-6 col-md-4";
-  } else if (layoutMode === "column2") {
-    layoutClasses = " col-12 col-sm-6";
-  } else if (layoutMode === "horizontalScroll") {
-    layoutClasses = "col-12 col-sm-4 col-lg-3";
-  } else {
-    layoutClasses = "col-12";
-    blogCardLayoutType = "horizontal";
+
+  switch (layoutMode) {
+    case "grid3":
+      layoutClasses = "col-12 col-sm-6 col-md-4";
+      break;
+    case "column2":
+      layoutClasses = "col-12 col-sm-6";
+      break;
+    case "horizontalScroll":
+      layoutClasses = "col-12 col-sm-4 col-lg-3";
+      break;
+    default:
+      layoutClasses = "col-6";
+      blogCardLayoutType = "horizontal";
   }
 
   return (
@@ -73,49 +76,15 @@ const Content = () => {
               <Dropdown.Item eventKey="Popular">Popular</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-          <div className="layout-controls d-md-block d-none">
-            <div className="layout-container d-flex">
-              <div
-                className={`layout-icon ${
-                  layoutMode === "grid3" ? "active" : ""
-                }`}
-                onClick={() => handleLayoutChange("grid3")}
-              >
-                <TfiLayoutGrid3Alt />
-              </div>
-              <div
-                className={`layout-icon ${
-                  layoutMode === "column2" ? "active" : ""
-                }`}
-                onClick={() => handleLayoutChange("column2")}
-              >
-                <RiLayoutGridFill />
-              </div>
-              <div
-                className={`layout-icon ${
-                  layoutMode === "horizontalScroll" ? "active" : ""
-                }`}
-                onClick={() => handleLayoutChange("horizontalScroll")}
-              >
-                <TfiLayoutColumn2Alt />
-              </div>
-              <div
-                className={`layout-icon ${
-                  layoutMode === "horizontalListing" ? "active" : ""
-                }`}
-                onClick={() => handleLayoutChange("horizontalListing")}
-              >
-                <TbLayoutListFilled />
-              </div>
-            </div>
+          <div className="d-none d-md-block">
+            <LayoutControl
+              handleLayoutChange={handleLayoutChange}
+              layoutMode={layoutMode}
+            />
           </div>
         </div>
       </div>
-      <div
-        className={`${
-          layoutMode === "horizontalScroll" ? "horizontal-carousel " : ""
-        }row mt-5 row-gap-2 row-gap-sm-5`}
-      >
+      <div className={`${layoutMode} row mt-5 row-gap-2 row-gap-sm-5`}>
         <div className={layoutClasses}>
           <ArticleCard
             title="Enhancing Vehicle Maintenance"

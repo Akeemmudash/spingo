@@ -1,7 +1,9 @@
 import { CiDeliveryTruck, CiLock } from "react-icons/ci";
 import { LiaMoneyBillSolid } from "react-icons/lia";
 import { FaPhone } from "react-icons/fa6";
+import { motion } from "framer-motion";
 import "./values.css";
+import { containerVariants, itemVariants } from "../../constants";
 
 const Values = () => {
   const values = [
@@ -28,10 +30,20 @@ const Values = () => {
   ];
 
   return (
-    <section className="value-section container section__body">
+    <motion.section
+      className="value-section container section__body"
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.45, once: true }}
+    >
       <div className="row">
         {values.map((value, index) => (
-          <div className="col-6 col-lg-3" key={`value-${index}`}>
+          <motion.div
+            className="col-6 col-lg-3"
+            key={`value-${index}`}
+            variants={itemVariants}
+          >
             <div className="value-item d-flex flex-column justify-content-center align-items-start">
               <div className="value-icon">{value.ValueIcon}</div>
               <div className="value-info font-primary">
@@ -41,10 +53,10 @@ const Values = () => {
                 <p className="mb-0">{value.ValuePin}</p>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

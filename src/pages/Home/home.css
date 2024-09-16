@@ -132,6 +132,10 @@ h2 {
   background-color: var(--base-black);
 }
 
+.featured__carousel .product-item {
+  min-width: 244px;
+}
+
 /* CategoriesSection */
 
 .categories-section {

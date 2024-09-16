@@ -34,8 +34,12 @@ export default function Profile() {
         <Dropdown.Item as={Link} to="/sign-in">
           Sign In
         </Dropdown.Item>
-        <Dropdown.Item to="/sign-up">Create Account</Dropdown.Item>
-        <Dropdown.Item href="My Cart">View Cart</Dropdown.Item>
+        <Dropdown.Item as={Link} to="/sign-up">
+          Create Account
+        </Dropdown.Item>
+        <Dropdown.Item as={Link} to="/cart">
+          View Cart
+        </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   );

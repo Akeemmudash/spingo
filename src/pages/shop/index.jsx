@@ -1,14 +1,14 @@
-import DHeader from "./DHeader";
-import DisplayHeader from "./DisplayHeader";
+import ShopPageHeader from "./ShopPageHeader";
 import NewsLetter from "../../components/NewsLetter";
+import ShopProductsLayout from "./ShopProductsLayout";
 import "./shop.css";
 
 export default function Shop() {
-    return (
-        <>   
-        <DisplayHeader />
-        <DHeader />
-        <NewsLetter />
-        </>
-    )
+  return (
+    <>
+      <ShopPageHeader />
+      <ShopProductsLayout />
+      <NewsLetter />
+    </>
+  );
 }

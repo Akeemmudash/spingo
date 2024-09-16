@@ -3,6 +3,7 @@
   flex-direction: column;
 }
 .article__card.vertical .card__head {
+  background-color: var(--gray-100);
   height: 78%;
 }
 .article__card.vertical .card__body {

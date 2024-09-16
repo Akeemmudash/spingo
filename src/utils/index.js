@@ -1,3 +1,2 @@
-import { getCurrentDate } from "./getCurrentDate";
-
-export { getCurrentDate };
+export { getCurrentDate } from "./getCurrentDate";
+export { formatToUSD, formatTextToSlug } from "./format";

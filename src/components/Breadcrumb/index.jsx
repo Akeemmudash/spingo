@@ -5,7 +5,9 @@ import { ChevronRight } from "../../assets/icons";
 function Breadcrumb() {
   const location = useLocation();
   const pathUrlSections = location.pathname.split("/").filter((x) => x);
-  const pathNames = pathUrlSections.filter((x) => isNaN(x));
+  const pathNames = pathUrlSections.map((x) => {
+    if (isNaN(x)) return x.replace("-", " ");
+  });
   return (
     <nav aria-label="breadcrumb" className="font-secondary mt-2">
       <ol className="breadcrumb__list d-flex gap-2 list-unstyled fs-7">
@@ -32,19 +34,18 @@ function Breadcrumb() {
             return (
               <li
                 key={to}
-                className="breadcrumb__item fw-semibold active"
+                className="breadcrumb__item fw-semibold active text-capitalize"
                 aria-current="page"
               >
-                {value.charAt(0).toUpperCase() + value.slice(1)}
+                {value}
               </li>
             );
           } else {
             return (
               <>
-                <li key={to} className="breadcrumb__item">
+                <li key={to} className="breadcrumb__item text-capitalize">
                   <Link to={to} className="breadcrumb__link">
-                    {!isNumber &&
-                      value.charAt(0).toUpperCase() + value.slice(1)}
+                    {!isNumber && value}
                   </Link>
                 </li>
                 <span className="me-2">

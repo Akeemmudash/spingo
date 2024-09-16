@@ -1,16 +1,15 @@
-.pageheader {
-  height: clamp(330px, 40vh, 392px);
-}
-.pageheader__paragraph {
-  font-size: clamp(16px, 2vw, 24px);
-}
 .blog-listing__tab {
   color: var(--base-black);
   border-bottom: 2px solid transparent;
 }
-.blog-listing__tab:hover,
-.blog-listing__tab.active {
+
+.blog-listing__tab.active,
+.blog-listing__tab.active:hover {
   color: var(--base-black);
+  border-bottom: 2px solid currentColor;
+}
+.blog-listing__tab:hover {
+  color: var(--base-gray);
   border-bottom: 2px solid currentColor;
 }
 
@@ -26,15 +25,7 @@
   background-color: var(--light-gray);
   color: var(--base-black);
 }
-.horizontal-carousel {
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.horizontal-carousel::-webkit-scrollbar {
-  display: none;
-}
+
 .show-more-btn {
   transition: transform 0.2s ease;
 }

@@ -1,7 +1,7 @@
 import "./product-card.css";
 import PropTypes from "prop-types";
 import StarRating from "../StarRating";
-import { formatToUSD } from "../../utils/formatToUSD";
+import { formatToUSD } from "../../utils/format";
 import Button from "../Button";
 import { LikeIcon } from "../../assets/icons";
 import { Link } from "react-router-dom";
@@ -12,6 +12,7 @@ ProductCard.propTypes = {
   productPrice: PropTypes.number,
   discount: PropTypes.number,
   productPageLink: PropTypes.number,
+  orientation: PropTypes.oneOf(["vertical", "horizontal"]),
 };
 
 export default function ProductCard({
@@ -20,6 +21,7 @@ export default function ProductCard({
   productPrice,
   discount,
   productPageLink,
+  orientation = "vertical",
 }) {
   const price = formatToUSD(productPrice);
   let oldPrice = parseFloat(
@@ -29,7 +31,9 @@ export default function ProductCard({
   console.log("oldPrice", oldPrice);
 
   return (
-    <div className="product-card d-flex flex-column rounded-3 overflow-hidden justify-content-between">
+    <div
+      className={"product-card d-flex rounded-3 overflow-hidden " + orientation}
+    >
       <div className="card__head rounded-3 position-relative overflow-hidden">
         <Link to={productPageLink} className="card__img h-full">
           <img
@@ -57,7 +61,7 @@ export default function ProductCard({
           Add to Cart
         </Button>
       </div>
-      <div className="card__body mt-1">
+      <div className="card__body d-flex flex-column">
         <div className="product__rating" title="5 out of 5">
           <StarRating rating={5} />
         </div>
@@ -67,7 +71,7 @@ export default function ProductCard({
         >
           {productName}
         </Link>
-        <p className="product__price mt-auto fs-7 mb-0">
+        <p className="product__price mt-2 fs-7 mb-0">
           <span className="fw-bold">{price}</span>
           <span className="text-decoration-line-through ms-2">{oldPrice}</span>
         </p>

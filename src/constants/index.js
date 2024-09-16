@@ -34,3 +34,5 @@ const paymentMethods = [
   { visa },
 ];
 export { footerNavItems, paymentMethods };
+export { categories, productPriceSorting } from "./data";
+export { itemVariants, containerVariants } from "./variants";

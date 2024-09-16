@@ -31,7 +31,7 @@ export default function ShopCollectionSection() {
           </div>
           <div className="col-12 col-md-6">
             <div className="row w-100 mx-auto h-100">
-              <div className="col-12 p-0  mt-0">
+              <div className="col-12 p-0">
                 <ShopCollectionCard collection={brake} />
               </div>
               <div className="col-12 p-0 mt-md-auto">

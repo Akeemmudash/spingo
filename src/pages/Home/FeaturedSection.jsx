@@ -27,46 +27,77 @@ export default function FeaturedSection() {
             </div>
           </div>
           <div className="featured__products section__body overflow-hidden">
-            <div className="featured__carousel d-flex gap-3">
-              <ProductCard
-                productName={"ClutchForce - Precision Clutch Kit"}
-                productImage={sampleImage}
-                productPrice={24.99}
-                productPageLink={"/shop/product/6666666666777"}
-                discount={10}
-              />
-
-              <ProductCard
-                productName={"ClutchForce - Precision Clutch Kit"}
-                productImage={sampleImage}
-                productPrice={24.99}
-                productPageLink={"/shop/product/6666666666777"}
-                discount={10}
-              />
-
-              <ProductCard
-                productName={"ClutchForce - Precision Clutch Kit"}
-                productImage={sampleImage}
-                productPrice={24.99}
-                productPageLink={"/shop/product/6666666666777"}
-                discount={10}
-              />
-
-              <ProductCard
-                productName={"ClutchForce - Precision Clutch Kit"}
-                productImage={sampleImage}
-                productPrice={24.99}
-                productPageLink={"/shop/product/6666666666777"}
-                discount={10}
-              />
-
-              <ProductCard
-                productName={"ClutchForce - Precision Clutch Kit"}
-                productImage={sampleImage}
-                productPrice={24.99}
-                productPageLink={"/shop/product/6666666666777"}
-                discount={10}
-              />
+            <div className="featured__carousel row flex-nowrap">
+              <div className="product-item col-3">
+                <ProductCard
+                  productName={"ClutchForce - Precision Clutch Kit"}
+                  productImage={sampleImage}
+                  productPrice={24.99}
+                  productPageLink={"/shop/product/6666666666777"}
+                  discount={10}
+                  orientation="vertical"
+                />
+              </div>
+              <div className="product-item col-3">
+                <ProductCard
+                  productName={"ClutchForce - Precision Clutch Kit"}
+                  productImage={sampleImage}
+                  productPrice={24.99}
+                  productPageLink={"/shop/product/6666666666777"}
+                  discount={10}
+                  orientation="vertical"
+                />
+              </div>
+              <div className="product-item col-3">
+                <ProductCard
+                  productName={"ClutchForce - Precision Clutch Kit"}
+                  productImage={sampleImage}
+                  productPrice={24.99}
+                  productPageLink={"/shop/product/6666666666777"}
+                  discount={10}
+                  orientation="vertical"
+                />
+              </div>
+              <div className="product-item col-3">
+                <ProductCard
+                  productName={"ClutchForce - Precision Clutch Kit"}
+                  productImage={sampleImage}
+                  productPrice={24.99}
+                  productPageLink={"/shop/product/6666666666777"}
+                  discount={10}
+                  orientation="vertical"
+                />
+              </div>
+              <div className="product-item col-3">
+                <ProductCard
+                  productName={"ClutchForce - Precision Clutch Kit"}
+                  productImage={sampleImage}
+                  productPrice={24.99}
+                  productPageLink={"/shop/product/6666666666777"}
+                  discount={10}
+                  orientation="vertical"
+                />
+              </div>
+              <div className="product-item col-3">
+                <ProductCard
+                  productName={"ClutchForce - Precision Clutch Kit"}
+                  productImage={sampleImage}
+                  productPrice={24.99}
+                  productPageLink={"/shop/product/6666666666777"}
+                  discount={10}
+                  orientation="vertical"
+                />
+              </div>
+              <div className="product-item col-3">
+                <ProductCard
+                  productName={"ClutchForce - Precision Clutch Kit"}
+                  productImage={sampleImage}
+                  productPrice={24.99}
+                  productPageLink={"/shop/product/6666666666777"}
+                  discount={10}
+                  orientation="vertical"
+                />
+              </div>
             </div>
           </div>
         </div>

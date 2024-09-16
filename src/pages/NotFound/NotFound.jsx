@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./notfound.css";
 
 const TicTacToe = () => {
@@ -66,7 +67,7 @@ const TicTacToe = () => {
       <h1 className="notfound--title">404 - Page Not Found</h1>
       <p className="notfound--text">Oops! Looks like you lost your way...</p>
       <h3 className="game--title">
-        But you can play Tic-Tac-Toe while you're here!
+        But you can play Tic-Tac-Toe while you&apos;re here!
       </h3>
       {!gameActive && winner && (
         <h1 className="game--winner">{renderStatus()}</h1>
@@ -89,8 +90,8 @@ const TicTacToe = () => {
         Restart Game
       </button>
       <br />
-      <button className="homepage--btn" href="#">
-        Go to Homepage
+      <button className="homepage--btn">
+        <Link to="/">Go to Homepage</Link>
       </button>
     </section>
   );

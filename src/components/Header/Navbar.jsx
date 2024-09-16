@@ -19,7 +19,16 @@ export default function Navbar() {
       <Nav className="font-secondary d-none d-lg-flex">
         <NavBody />
       </Nav>
-      <NavbarForMobile handleClose={handleClose} isShowing={isShowing} />
+      <Offcanvas show={isShowing} onHide={handleClose} className="d-lg-none">
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>
+            <Logo />
+          </Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body className="nav__small-screen d-flex justify-content-center align-items-center flex-column">
+          <NavBody />
+        </Offcanvas.Body>
+      </Offcanvas>
     </>
   );
 }
@@ -27,9 +36,14 @@ export default function Navbar() {
 function NavDropdownWithState({ title, children }) {
   const [isShowing, setIsShowing] = useState(false);
 
+  const handleMouseEnter = () => setIsShowing(true);
+  const handleMouseLeave = () => setIsShowing(false);
+
   return (
     <NavDropdown
-      onToggle={(isShowing) => setIsShowing(isShowing)}
+      show={isShowing}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       title={<DropdownTab title={title} isDropShowing={isShowing} />}
       id="basic-nav-dropdown"
     >
@@ -53,16 +67,13 @@ function ChevronDown() {
       xmlns="http://www.w3.org/2000/svg"
       className="chevron-down__svg"
     >
-      <g id="Icon/chevron-down">
-        <path
-          id="Vector"
-          d="M5.20435 6.75L9.70435 11.25L14.2043 6.75"
-          stroke="#141718"
-          strokeWidth="1.125"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </g>
+      <path
+        d="M5.20435 6.75L9.70435 11.25L14.2043 6.75"
+        stroke="#141718"
+        strokeWidth="1.125"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
@@ -74,7 +85,7 @@ DropdownTab.propTypes = {
 
 function DropdownTab({ title, isDropShowing }) {
   return (
-    <span className={`dropdown__tab ${isDropShowing ? "rotate" : ""} `}>
+    <span className={`dropdown__tab ${isDropShowing ? "rotate" : ""}`}>
       {title} <ChevronDown />
     </span>
   );
@@ -83,7 +94,7 @@ function DropdownTab({ title, isDropShowing }) {
 function Navhamburger({ onShow }) {
   return (
     <button
-      className=" hamburger-btn btn-reset w-6 h-auto d-lg-none p-1"
+      className="hamburger-btn btn-reset w-6 h-auto d-lg-none p-1"
       type="button"
       onClick={onShow}
       aria-label="Toggle navigation"
@@ -127,7 +138,6 @@ function NavBody() {
         <NavDropdown.Divider />
         <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
       </NavDropdownWithState>
-
       <NavLink
         to="/contact"
         className={({ isActive }) =>

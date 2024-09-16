@@ -180,18 +180,19 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  flex-direction: column;
 }
 
-.sectionContent.grid3 .content-display img,
+/* .sectionContent.grid3 .content-display img,
 .sectionContent.grid3 .content-display p {
   display: none;
-}
+} */
 
 /* GridFill Mode */
 .sectionContent.gridFill .content-display {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 

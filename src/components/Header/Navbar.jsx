@@ -19,16 +19,7 @@ export default function Navbar() {
       <Nav className="font-secondary d-none d-lg-flex">
         <NavBody />
       </Nav>
-      <Offcanvas show={isShowing} onHide={handleClose} className="d-lg-none">
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>
-            <Logo />
-          </Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body className="nav__small-screen d-flex justify-content-center align-items-center flex-column">
-          <NavBody />
-        </Offcanvas.Body>
-      </Offcanvas>
+      <NavbarForMobile isShowing={isShowing} handleClose={handleClose} />
     </>
   );
 }

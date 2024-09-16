@@ -130,9 +130,9 @@ const ContactSection = () => {
                   width="100%"
                   style={{ border: "0" }}
                   allowFullScreen=""
+                  referrerPolicy="origin"
                   className="h-100"
                   loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
               </div>
             </motion.div>

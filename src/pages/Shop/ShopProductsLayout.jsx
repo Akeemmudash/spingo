@@ -122,7 +122,7 @@ export default function ShopProductsLayout() {
           </div>
         ))}
       </div>
-      <div className="mt-4 mt-md-5 text-center">
+      <div className="mt-4 mt-md-5 text-center text-base-black">
         <Button
           variant="outline"
           className="show-more-btn rounded-pill px-5 py-3"

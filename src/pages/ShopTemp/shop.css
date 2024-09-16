@@ -1,0 +1,26 @@
+.shop-products__dropdown {
+  width: 200px;
+}
+.shop-products__dropdown:hover button {
+  border-color: var(--base-gray);
+}
+.shop-products__layout--body.row {
+  --bs-gutter-y: 1.5rem;
+}
+@media screen and (max-width: 575px) {
+  .shop-products__dropdown {
+    width: 100%;
+  }
+  .shop-products__layout .sort__dropdown {
+    border-top: 1px solid var(--base-gray);
+    border-bottom: 1px solid var(--base-gray);
+    width: 100%;
+    padding-block: 5px;
+  }
+  .shop-products__layout .layout-control__box {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

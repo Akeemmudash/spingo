@@ -3,7 +3,7 @@ import BlogListing from "./pages/BlogListing";
 import ContactUs from "./pages/ContactUs";
 import NotFound from "./pages/NotFound/NotFound";
 import Product from "./pages/Product";
-import Shop from "./pages/ShopTemp";
+import Shop from "./pages/Shop";
 import Home from "./pages/Home";
 import Layout from "./pages/Layout";
 import { SignIn, SignUp } from "./pages/SignUp";
